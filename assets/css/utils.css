@@ -1,0 +1,202 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --cor1: rgb(255, 183, 49);
+    --cor2: rgb(216, 124, 4);
+    --cor3: rgb(232, 134, 6);
+    --hf: #fff;
+    --hfLetter: var(--cor2);
+    --icon_path: "assets/img/patasfundo.png";
+    --logo_path: "assets/img/logofundoremovido.png";
+}
+body {
+    background: linear-gradient(to right, #f1e9d4, #fce7af);
+    /* background: linear-gradient(to right, #ffdf78, #fa8124); */
+    /* background: linear-gradient(to right, rgb(252, 196, 93), rgb(245, 159, 48)); */
+    /* background-color: #fff9d8; */
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+} 
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--cor2);
+}
+body::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+
+/* NAVBAR*/
+header{
+    width: 80%;
+    height: 10vh;
+    background: var(--hf);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    border-color: #FFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    width: 25%;
+    display: block;
+    margin-left: -8vh;
+}
+nav .logo{
+    display: none;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li a {
+    color: var(--hfLetter);
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 18px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+nav ul li a:hover {
+    background: #f8f4e9;
+}
+nav ul li {
+    position: relative;
+    float: left;
+}
+nav #drop{
+    color: white;
+}
+nav ul li #drop:hover {
+    background: var(--cor2);
+}
+nav ul li ul {
+    position: absolute;
+    width: 160%;    
+    background: var(--cor3);
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+nav ul li:hover ul {
+    display: block;
+}
+.mn {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.mn:hover {
+    background: #f6f4ff;
+}
+.mn div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #838999;
+}
+
+/* RESPONSIVIDADE NAVBAR */
+@media only screen and (max-width: 900px) {
+    header {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    nav {
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index: 999;
+        width: 280px;
+        height: 100vh;
+        background-color: #fefefe;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #nav_check:checked~nav {
+        left: 0;
+    }
+
+    nav .logo {
+        display: block;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .mn{
+        display: block;
+    }
+}
+
+/* FOOTER */
+.footer {
+    color: var(--hfLetter);
+    width: 80%;
+    padding: 10px;
+    height: 10vh;
+    text-align: center;
+    background-color: var(--hf);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* RESPONSIVIDADE DA LOGO */
+@media (max-width: 300px) {
+    .logo {
+        transform: scale(0.25); 
+    }
+}
+@media (min-width: 300px) and (max-width: 600px) {
+    .logo {
+        transform: scale(0.4); 
+    }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+    .logo {
+        transform: scale(0.50); 
+    }
+}
+@media (min-width: 900px) {
+    .logo {
+        transform: scale(0.6); 
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/cad_animal.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
+
+    <title>Cadastro Adoção</title>
+
+    <script src="assets/js/cad_animal.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="logoss" src="assets/img/logofundoremovido.png">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="inicio.html">Início</a>
+                </li>
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
+                </li>
+                <li>
+                    <a href="a1blog.html">Blog</a>
+				</li>
+                <li>
+                    <a href="perfil_usuario.html">Perfil</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="mn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <section class="container c1">
+        <form action="">
+            <div class="bloco1">
+                <h1>Cadastrar animais para adoção</h1>
+                <hr>
+                <div class="botao_pets">
+                    <ul>
+                        <li class="btn_tipo" id="clicked" onclick="change(0)"><b>GATO</b></li>
+                        <li class="btn_tipo" onclick="change(1)"><b>CACHORRO</b></li>
+                    </ul>
+                </div>
+    
+                <div class="img_insert">
+                    <input type="file" id="file" accept="image/*" hidden>
+                    <div class="img-area" data-img="">
+                        <i class='bx bxs-cloud-upload icon'></i>
+                        <h3>Foto do animal</h3>
+                        <p>O tamanho da imagem precisa ser menor que  <span>5MB</span></p>
+                    </div>
+                    <button class="select-image">SELECIONAR IMAGEM</button>
+                </div>
+            </div>
+            <div class="bloco2">
+                <div class="input-container">
+                    <input type="text" id="input" required class="nome">
+                    <label for="input" class="label">Nome do animal</label>
+                    <div class="underline" id="input_under"></div>
+                </div>
+    
+                <div class="radio-button-container">
+                    <div class="radio-button">
+                        <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
+                        <label class="radio-button__label" for="radio1" id="macho">
+                        <span class="radio-button__custom"></span>
+                        Macho
+                        </label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
+                        <label class="radio-button__label" for="radio2" id="femea">
+                        <span class="radio-button__custom"></span>
+                        Fêmea
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="input-container">
+                    <input type="number" id="input" required class="peso" min="0">
+                    <label for="input" class="label">Peso do animal (kg)</label>
+                    <div class="underline" id="input_under"></div>
+                </div>
+    
+                <div class="input-container">
+                    <input type="number" id="input" required class="tamanho" min="0">
+                    <label for="input" class="label">Tamanho do animal (cm)</label>
+                    <div class="underline" id="input_under"></div>
+                </div>
+    
+                <div class="input-container">
+                    <input type="number" id="input" required class="raca" min="0">
+                    <label for="input" class="label">Raça do animal</label>
+                    <div class="underline" id="input_under"></div>
+                </div>
+    
+                <div class="input-container">
+                    <textarea id="text" required></textarea>
+                    <label for="text" class="label">Descrição do animal</label>
+                    <div class="underline" id="tarea"></div>
+                </div>
+                <div class="btn_cad">
+                    <a href="perfil_adocao.html" class="cadastrar">CADASTRAR</a>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="footer">
+            <h3>&copy Todos Direitos Reservados</h3>
+        </div>
+    </footer>
+</body>
+</html>

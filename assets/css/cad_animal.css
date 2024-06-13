@@ -1,0 +1,313 @@
+/* GRID RES */
+
+@media (max-width: 900px) {
+    form{
+        flex-direction: column;
+    }
+}
+@media (min-width: 900px) {
+    .bloco1{
+        width: 50%;
+    }
+    .bloco2{
+        width: 50%;
+    }
+}
+
+
+/* SECTION - GERAL */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vh 2vh;
+}
+.bloco, .bloco2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 4vh 0 4vh;
+}
+section form{
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 3vh;
+}
+section h1{
+    text-align: center;
+    color: #838999;
+}
+hr{
+    margin-top: 2vh;
+    border-radius: 50%;
+    border: #f2f2f2 solid .5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* SECTION - BOTAO PETS */
+.botao_pets{
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .5s ease;
+    margin-left: -4vh;
+    color: #838999;
+}
+.botao_pets ul{
+    list-style: none;
+    display: flex;
+}
+.botao_pets ul li{
+    margin-left: 4vh;
+    height: 3.4vh;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vh;
+}
+.botao_pets ul li:hover{
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: #eef0f7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+.botao_pets ul #clicked{
+    background-color: var(--cor2);
+    transition: all .5s ease;
+    height: 3.4vh;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* SECTION - UPLOAD IMAGEM */
+.img_insert {
+	width: 100%;
+	padding: 30px;
+	border-radius: 30px;
+}
+.img-area {
+    color: #838999;
+	position: relative;
+    padding: 5vh;
+	background: #f2f2f2;
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.img-area p {
+	color: #999;
+    padding-left: 1.5vh;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.select-image {
+    margin-top: -1.5vh;
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 15px;
+	background: var(--cor2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+button.select-image:hover {
+    background: var(--cor1);
+    box-shadow: 0px 15px 20px var(--cor2);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+/* SECTION - INPUT TEXT */
+.input-container {
+    position: relative;
+    margin-top: 5vh;
+}
+.input-container input[type="text"],.input-container input[type="number"]{
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    background-color: transparent;
+    outline: none;
+}
+.input-container textarea {
+    font-size: 15px;
+    width: 100%;
+    height: 20vh;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+    resize: none;
+}
+.input-container .label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ccc;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.input-container input[type="text"]:focus ~ .label, .input-container input[type="number"]:focus ~ .label, .input-container textarea:focus ~ .label, 
+.input-container input[type="text"]:valid ~ .label, .input-container input[type="number"]:valid ~ .label, .input-container textarea:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+.input-container #input_under, #tarea{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+.input-container #tarea{
+    bottom: .4vh;
+}
+
+.input-container textarea:focus ~ #tarea, .input-container textarea:focus ~ #tarea2, .input-container input[type="text"]:focus ~ #input_under, .input-container input[type="number"]:focus ~ #input_under,
+.input-container textarea:valid ~ #tarea, .input-container textarea:valid ~ #tarea2, .input-container input[type="text"]:valid ~ #input_under, .input-container input[type="number"]:valid ~ #input_under {
+    transform: scaleX(1);
+}
+
+/* SECTION - MACHO OU FEMEA */
+.radio-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 5vh;
+}  
+.radio-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+} 
+.radio-button__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-color: white;
+}  
+.radio-button__label {
+    display: inline-block;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 15px;
+    color: #838999;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}  
+.radio-button__custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    transition: all 0.3s ease;
+}  
+.radio-button__input:checked + #macho .radio-button__custom {
+    background-color: #4c8bf5;
+    border-color: transparent;
+    transform: scale(0.8);
+    box-shadow: 0 0 20px #4c8bf580;
+}
+.radio-button__input:checked + #femea .radio-button__custom {
+    background-color: #f54cd6;
+    border-color: transparent;
+    transform: scale(0.8);
+    box-shadow: 0 0 20px #f54cd380;
+}
+.radio-button__input:checked + #macho {
+    color: #4c8bf5;
+} 
+.radio-button__input:checked + #femea {
+    color: #f54cd6;
+} 
+#macho:hover .radio-button__custom{
+    transform: scale(1.2);
+    border-color: #4c8bf5;
+    box-shadow: 0 0 20px #4c8bf580;
+}
+#femea:hover .radio-button__custom{
+    transform: scale(1.2);
+    border-color: #f54cd6;
+    box-shadow: 0 0 20px #f54cd380;
+}
+
+/* SECTION - CADASTRAR */
+.btn_cad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+}
+.cadastrar {
+    padding: 1.3em 3em;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background: var(--cor2);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+.cadastrar:hover {
+    background: var(--cor1);
+    box-shadow: 0px 15px 20px var(--cor2);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+.cadastrar:active {
+    transform: translateY(-1px);
+}

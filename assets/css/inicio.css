@@ -65,14 +65,16 @@ section {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     width: 100%;
-    /* max-width: 300px;  */
     text-align: center;
 }
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Altura fixa para garantir consistência */
+    object-fit: cover; /* Ou "contain", dependendo do efeito desejado */
     display: block;
+    
 }
+
 .card-content {
     padding: 15px;
 }

@@ -250,6 +250,7 @@ button.select-image:hover {
     border: 2px solid #ccc;
     transition: all 0.3s ease;
 }  
+/* SE RADIO_BUTTON FOR CHECKED, O ESTILO DO BOTAO MUDA */
 .radio-button__input:checked + #macho .radio-button__custom {
     background-color: #4c8bf5;
     border-color: transparent;

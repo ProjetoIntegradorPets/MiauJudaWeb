@@ -17,13 +17,17 @@
     <script defer src="assets/js/blog.js"></script>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
+        <!-- LOGO -->
         <div class="logo">
             <img id="logoss" src="assets/img/logofundoremovido.png">
         </div>
         <input type="checkbox" id="nav_check" hidden>
+        <!-- NAVBAR -->
         <nav>
             <ul>
+                <!-- ITENS DA NAVBAR -->
                 <li>
                     <a href="inicio.html">Início</a>
                 </li>
@@ -38,6 +42,7 @@
                 </li>
             </ul>
         </nav>
+        <!-- NAVBAR RESPONSIVA -->
         <label for="nav_check" class="mn">
             <div></div>
             <div></div>
@@ -45,14 +50,22 @@
         </label>
     </header>
 
+    <!-- CONTAINER -->
     <div class="container">
+
+        <!-- FUNDO -->
         <div class="background">
+
+            <!-- CONTEUDO  -->
             <div class="page">
+
+                <!-- PRINCIPAL -->
                 <section class="conteudo_principal">
     
                     <h2>Principas Publicações</h2>
                     <hr>
 
+                    <!-- IMAGENS DO CARROSSEL -->
                     <section class="main_container">
                         <div class="slide_container swiper">
                            <div class="slides">
@@ -90,32 +103,35 @@
                     
                               </div>
                            </div>
-               
-                           <!-- paginação -->
                            <div class="swiper-pagination"></div>
-               
-                        </div>
-                     </section>
-
+                           
+                           </div>
+                    <!--FIM DO CARROSSEL -->
+                    </section>
                 </section>
+
+                <!-- SECUNDARIO -->
                 <section class="cont_secundario">
 
                     <h2>Conteúdos Recentes</h2>
                     <hr>
 
+                    <!-- BARRA DE ROLAGEM COM CARDS -->
                     <section class="container">
                         <div class="card_container swiper">
                             <div class="cards">
+                                <!-- CARDS -->
                                 <div class="swiper-wrapper">
                
+                                    <!-- CARD -->
                                     <article class="artigo_card swiper-slide">
-               
+                                        <!-- IMG CARD -->
                                         <div class="img_card">
                                             <a href="">
                                                 <img src="assets/img/lolozinho.jpg" alt="Gato" class="imagem">
                                             </a>
                                         </div>
-                    
+                                        <!-- INFO CARD -->
                                         <div class="card_info">
                                             <h3 class="titulo_card">Comportamento animal</h3>
                                             <p class="txt_card">
@@ -124,19 +140,15 @@
                     
                                             <button class="btn_card">Ler Mais</button>
                                         </div>
-               
                                     </article>
                     
                                     <article class="artigo_card swiper-slide">
-               
                                         <div class="img_card">
                                             <a href="">
                                                 <img src="assets/img/lolozinho.jpg" alt="Gato" class="imagem">
                                             </a>
                                         </div>
-                    
                                         <div class="card_info">
-               
                                             <h3 class="titulo_card">Enriquecimento ambiental</h3>
                                             <p class="txt_card">
                                                 Maneiras de enriquecer o ambiente dos animais de estimação.
@@ -211,7 +223,7 @@
                                         </div>
                
                                     </article>
-               
+                                <!-- FIM DOS CARDS -->
                                 </div>
                            </div>
                
@@ -232,11 +244,15 @@
 
                 </section>
             </div>
+
+            <!-- BARRA LATERAL -->
             <aside>
                 <div class="barra_lateral">
+                    <!-- INPUT DE PESQUISA -->
                     <label for="search">Pesquisar conteúdo:</label><br>
                     <input type="text" id="search">
         
+                    <!-- FILTROS -->
                     <div class="filtros">
                         <p>Filtrar publicações:</p>
         
@@ -245,9 +261,11 @@
                             <button>Gatos</button>
                         </div>
                     </div>
-        
+                    
+                    <!-- IMAGEM -->
                     <img src="assets/img/petdesaparecido_white.png" alt="Anúncio de animal perdido" class="img_col2">
         
+                    <!-- OBSERVAÇÕES -->
                     <div class="observacao">
                         <p>Alguma sugestão de melhoria?</p>
                         <p>Contate a equipe:</p>
@@ -257,8 +275,11 @@
             </aside>
         </div>
     </div>
+    
+    <!-- FOOTER -->
     <footer>
         <div class="footer">
+            <!-- DIREITO AUTORAL -->
             <h3>&copy Todos Direitos Reservados</h3>
         </div>
     </footer>

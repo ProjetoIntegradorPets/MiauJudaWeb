@@ -1,5 +1,7 @@
-
+/* FONTE DO SITE  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +10,8 @@
     list-style: none;
     text-decoration: none;
 }
+
+/* VARIÁVEIS DO SISTEMA */
 :root{
     --cor1: rgb(255, 183, 49);
     --cor2: rgb(216, 124, 4);
@@ -19,13 +23,12 @@
 }
 body {
     background: linear-gradient(to right, #f1e9d4, #fce7af);
-    /* background: linear-gradient(to right, #ffdf78, #fa8124); */
-    /* background: linear-gradient(to right, rgb(252, 196, 93), rgb(245, 159, 48)); */
-    /* background-color: #fff9d8; */
     position: relative;
     min-height: 100vh;
     width: 100%;
 } 
+
+/* SCROLL BAR CUSTOM */
 body::-webkit-scrollbar-thumb {
     border-radius: 20px;
     background: var(--cor2);
@@ -49,6 +52,8 @@ header{
     border-color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+/* LOGO */
 .logo{
     width: 25%;
     display: block;
@@ -57,6 +62,8 @@ header{
 nav .logo{
     display: none;
 }
+
+/* LISTA DE ITENS DA NAV */
 nav ul {
     list-style: none;
 }
@@ -94,6 +101,7 @@ nav ul li ul {
 nav ul li:hover ul {
     display: block;
 }
+/* NAVBAR RESPONSIVA */
 .mn {
     display: none;
     height: fit-content;

@@ -14,13 +14,17 @@
     <script src="assets/js/cad_animal.js" defer></script>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
+        <!-- LOGO -->
         <div class="logo">
             <img id="logoss" src="assets/img/logofundoremovido.png">
         </div>
         <input type="checkbox" id="nav_check" hidden>
+        <!-- NAVBAR -->
         <nav>
             <ul>
+                <!-- ITENS DA NAVBAR -->
                 <li>
                     <a href="inicio.html">Início</a>
                 </li>
@@ -35,6 +39,7 @@
                 </li>
             </ul>
         </nav>
+        <!-- NAVBAR RESPONSIVA -->
         <label for="nav_check" class="mn">
             <div></div>
             <div></div>
@@ -42,11 +47,16 @@
         </label>
     </header>
 
+    <!-- CONTAINER -->
     <section class="container c2">
         <form action="">
+            <!-- DIV BLOCO 01 -->
             <div class="bloco1">
+                <!-- TITULO -->
                 <h1>Cadastrar animal perdido</h1>
                 <hr>
+
+                <!-- TIPO DO CACHORRO -->
                 <div class="botao_pets">
                     <ul>
                         <li class="btn_tipo" id="clicked" onclick="change(0)"><b>GATO</b></li>
@@ -54,6 +64,7 @@
                     </ul>
                 </div>
     
+                <!-- INSERIR IMAGEM -->
                 <div class="img_insert">
                     <input type="file" id="file" accept="image/*" hidden>
                     <div class="img-area" data-img="">
@@ -64,36 +75,51 @@
                     <button class="select-image">Selecionar imagem</button>
                 </div>
             </div>
+
+            <!-- DIV BLOCO 02 -->
             <div class="bloco2">
+
+                <!-- DADOS DO ANIMAL  -->
+
+                    <!-- NOME  -->
                 <div class="input-container">
                     <input type="text" id="input" required class="nome">
                     <label for="input" class="label">Nome do animal</label>
                     <div class="underline" id="input_under"></div>
-                </div>                
-                
+                </div>        
+
+                    <!-- DESCRICAO -->
                 <div class="input-container">
                     <textarea id="text" required></textarea>
                     <label for="text" class="label">Descrição do animal</label>
                     <div class="underline" id="tarea"></div>
                 </div>
+                    <!-- ULTIMA LOCALIZACAO -->
                 <div class="input-container">
                     <input type="text" id="input" required class="nome">
                     <label for="input" class="label">Última localização</label>
                     <div class="underline" id="input_under"></div>
                 </div>                
+                    <!-- FORMA DE CONTATO -->
                 <div class="input-container">
                     <input type="text" id="input" required class="nome">
                     <label for="input" class="label">Forma de contato</label>
                     <div class="underline" id="input_under"></div>
-                </div>                
+                </div>        
+                
+                <!-- BOTAO DE CADASTRAR -->
                 <div class="btn_cad">
-                    <a href="perfil_perdido.html" class="cadastrar">CADASTRAR</a>
+                    <button type="submit" class="cadastrar">CADASTRAR</button>
+                    <!-- window.location.href = perfil_perdido.html"; -->
                 </div>
             </div>
         </form>
     </section>
+    
+    <!-- FOOTER -->
     <footer>
         <div class="footer">
+            <!-- DIREITO AUTORAL -->
             <h3>&copy Todos Direitos Reservados</h3>
         </div>
     </footer>

@@ -41,16 +41,16 @@
 
                 <span>ou use seu email para cadastro</span>
                 <!-- INPUT DE INSCRICAO -->
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
+                <input type="text" placeholder="Nome" id="uNameUP">
+                <span class="input_error">Not a valid Email</span>
+                <input type="email" placeholder="Email" id="uEmail">
+                <input type="password" placeholder="Senha" id="uPassUP">
+                <input type="password" placeholder="Confirmar senha" id="uCPass">
                 
 
                 <!-- BOTAO DE CADASTRAR -->
-                    <!-- <button2 id="btn2">
-                        <a class="registre-se">Registre-se</a>
-                    </button2> -->
-                <a id="btn2" class="btn_sub" href="inicio.html">Registre-se</a>
+                    <button id="btn2" class="btn_sub" onclick="singUp()">Registre-se</button>
+                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Registre-se</a> -->
 
             </form>
         </div>
@@ -80,14 +80,15 @@
 
                 <span>ou use a senha do seu email</span>
                 <!-- INPUT DE LOGIN -->
-                <input type="text" placeholder="Nome">
-                <input type="password" placeholder="Senha">
+                <input type="text" placeholder="Nome" id="uNameIN">
+                <input type="password" placeholder="Senha" id="uPassIN">
                 
                 <!-- ESQUECEU SENHA -->
                 <a href="#" class="password">Esqueceu a Senha?</a>
                 
                 <!-- BTN DE LOGIN -->
-                <a id="btn2" class="btn_sub" href="inicio.html">Login</a>
+                <button id="btn2" class="btn_sub" onclick="singIn()">Login</button>
+                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Login</a> -->
             </form>
         </div>
 

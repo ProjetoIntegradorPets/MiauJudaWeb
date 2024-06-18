@@ -4,110 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/utils.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
 
     <title>MIAUjuda</title>
 
-    <script type="module" src="assets/js/index.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
+
 </head>
 <body>
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <div class="logo">
+            <img id="logoss" src="assets/img/logofundoremovido.png">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <!-- NAVBAR -->
+        <nav>
+            <ul>
+                <!-- ITENS DA NAVBAR -->
+                <li>
+                    <a href="inicio.html">Início</a>
+                </li>
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+				</li>
+                <li>
+                    <a href="perfil_usuario.html">Perfil</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- NAVBAR RESPONSIVA -->
+        <label for="nav_check" class="mn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+
     <!-- CONTAINER -->
-    <section class="container" id="container">
+    <section>
 
-        <!-- DIV DE CADASTRO -->
-        <div class="form-container sign-up">
-            <form>
-                <!-- TITULO -->
-                <h1>Crie uma conta</h1>
+        <!-- FUNDO -->
+        <div class="background">
 
-                <!-- ICONES DE CONTATO -->
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+            <!-- FILTRO POR TIPO -->
+            <div class="gallery-filter">
+                <span class="filter-item active" data-filter="all">Todos</span>
+                <span class="filter-item" data-filter="cao">Cães</span>
+                <span class="filter-item" data-filter="gato">Gatos</span>
+            </div>
+
+            <!-- GRID DE ANIMAIS -->
+            <div class="gallery">
+
+                <!-- CARD -->
+                <div class="card cao">
+                    <!-- IMG CARD -->
+                    <img src="assets/img/gettyimages-530330473.jpg" alt="Gatos">
+                    <!-- CONTENT CARD  -->
+                    <div class="card-content">
+                        <div class="card-title">Big</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card cao">
+                    <img src="assets/img/cachorro2.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Paçoca</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card cao">
+                    <img src="assets/img/dog3.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Bob</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card gato">
+                    <img src="assets/img/lolozinho.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Lolozinho</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card cao">
+                    <img src="assets/img/Golden.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Major</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card cao">
+                    <img src="assets/img/dog8.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Pipoca</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card gato">
+                    <img src="assets/img/gato.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Nina</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card cao">
+                    <img src="assets/img/dogbonitinho.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Django</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card gato">
+                    <img src="assets/img/gato2.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Blade</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/gatitoamassado.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Batman</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/cat1.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Serena</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/cat3.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Stewie</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/img/cat4.jpg" alt="Gatos">
+                    <div class="card-content">
+                        <div class="card-title">Laranja</div>
+                        <div class="card-location">São Paulo, São Paulo</div>
+                    </div>
                 </div>
 
-                <span>ou use seu email para cadastro</span>
-                <!-- INPUT DE INSCRICAO -->
-                <input type="text" placeholder="Nome" id="uName">
-                <input type="email" placeholder="Email" id="uEmailUP">
-                <input type="password" placeholder="Senha" id="uPassUP">
-                <input type="password" placeholder="Confirmar senha" id="uCPass">
-                
-
-                <!-- BOTAO DE CADASTRAR -->
-                    <button id="btn2 sUP" class="btn_sub" onclick="singUp()">Registre-se</button>
-                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Registre-se</a> -->
-
-            </form>
-        </div>
-
-        <!-- DIV DE LOGIN -->
-        <div class="form-container sign-in">
-            <form>
-                <!-- TITULO -->
-                <h1>Login</h1>
-                
-                <!-- FORMAS DE CONTATO -->
-                <div class="social-media">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-
-
-                <span>ou use a senha do seu email</span>
-                <!-- INPUT DE LOGIN -->
-                <input type="email" placeholder="Email" id="uEmailIN">
-                <input type="password" placeholder="Senha" id="uPassIN">
-                
-                <!-- ESQUECEU SENHA -->
-                <a href="#" class="password">Esqueceu a Senha?</a>
-                
-                <!-- BTN DE LOGIN -->
-                <button id="btn2 sIN" class="btn_sub" onclick="singIn()">Login</button>
-                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Login</a> -->
-            </form>
-        </div>
-
-        <!-- DIV SECUNDARIA -->
-        <div class="toggle-container">
-            <div class="toggle">
-                <!-- CADASTRO -> LOGIN  -->
-                <div class="toggle-panel toggle-left">
-                    <h1>Bem vindo de volta!</h1>
-                    <p>Use as informações cadastradas para ter acesso ao site</p>
-                    <button class="hidden" id="login">Tela de Login</button>
-                </div>
-                <!-- LOGIN -> CADASTRO -->
-                <div class="toggle-panel toggle-right">
-                    <h1>Bem vindo!</h1>
-                    <p>Registre suas informações para ter acesso ao site</p>
-                    <button class="hidden" id="register">Cadastrar</button>
-                </div>
+            <!-- FIM DO GRID -->
             </div>
         </div>
     </section>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <!-- DIREITO AUTORAL -->
+            <h3>&copy Todos Direitos Reservados</h3>
+        </div>
+    </footer>
 </body>
 </html>

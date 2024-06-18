@@ -14,12 +14,22 @@ export function createError(msg){
     return el
 }
 
-// add error 
+// add error if not exists
 export function addError(msg, ref){
-    ref.nextElementSibling.textContent = msg;
-    if(ref.nextElementSibling && !ref.nextElementSibling.classList.contains('input_error')) insertAfter(createError(msg), ref);
+    if(verifyNextElement(ref, 'input_error', false)) {
+        insertAfter(createError(msg), ref);
+    }else{
+        ref.nextElementSibling.textContent = msg;
+    }
 }
-// destroy error
-export function destroyError(ref){
-    if (ref && ref.nextElementSibling) return ref.nextElementSibling.remove();
+
+// destroy error if exists 
+export function destroyError(ref, cl){
+    if (verifyNextElement(ref, cl, true)) return ref.nextElementSibling.remove();
+}
+
+// verify nextElement exists && verify the name of the class
+export function verifyNextElement(ref, cl, contains){
+    if (contains) {return ref.nextElementSibling && ref.nextElementSibling.classList.contains(cl);}
+    else{return ref.nextElementSibling && !ref.nextElementSibling.classList.contains(cl);}
 }

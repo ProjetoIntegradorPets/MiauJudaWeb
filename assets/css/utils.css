@@ -30,7 +30,8 @@ body {
 .input_error{
     display: block;
     visibility: hidden;
-    margin-left: -17vh;
+    margin-left: -10%;
+    padding-left: 0;
     margin-top: -.6vh;
     color: red;
 }

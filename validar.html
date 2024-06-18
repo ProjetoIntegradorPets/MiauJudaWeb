@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="assets/css/validar.css">
+    <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
+
+    <title>MIAUjuda</title>
+
+    <script type="module" src="assets/js/validar.js" defer></script>
+</head>
+<body>
+    <!-- CONTAINER -->
+    <section class="container" id="container">
+
+        <!-- DIV DE CADASTRO -->
+        <div class="form-container sign-up">
+            <form>
+                <!-- TITULO -->
+                <h1>Crie uma conta</h1>
+
+                <!-- ICONES DE CONTATO -->
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <span>ou use seu email para cadastro</span>
+                <!-- INPUT DE INSCRICAO -->
+                <input type="text" placeholder="Nome" id="uName" class="input_signUP">
+                <input type="email" placeholder="Email" id="uEmailUP" class="input_signUP">
+                <input type="password" placeholder="Senha" id="uPassUP" class="input_signUP">
+                <input type="password" placeholder="Confirmar senha" id="uCPass" class="input_signUP">
+                
+
+                <!-- BOTAO DE CADASTRAR -->
+                    <button id="btn2 sUP" class="btn_sub">Registre-se</button>
+                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Registre-se</a> -->
+
+            </form>
+        </div>
+
+        <!-- DIV DE LOGIN -->
+        <div class="form-container sign-in">
+            <form>
+                <!-- TITULO -->
+                <h1>Login</h1>
+                
+                <!-- FORMAS DE CONTATO -->
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+
+                <span>ou use a senha do seu email</span>
+                <!-- INPUT DE LOGIN -->
+                <input type="email" placeholder="Email" id="uEmailIN" class="input_signIN">
+                <input type="password" placeholder="Senha" id="uPassIN" class="input_signIN">
+                
+                <!-- ESQUECEU SENHA -->
+                <a href="#" class="password">Esqueceu a Senha?</a>
+                
+                <!-- BTN DE LOGIN -->
+                <button id="btn2 sIN" class="btn_sub">Login</button>
+                <!-- <a id="btn2" class="btn_sub" href="inicio.html">Login</a> -->
+            </form>
+        </div>
+
+        <!-- DIV SECUNDARIA -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <!-- CADASTRO -> LOGIN  -->
+                <div class="toggle-panel toggle-left">
+                    <h1>Bem vindo de volta!</h1>
+                    <p>Use as informações cadastradas para ter acesso ao site</p>
+                    <button class="hidden" id="login">Tela de Login</button>
+                </div>
+                <!-- LOGIN -> CADASTRO -->
+                <div class="toggle-panel toggle-right">
+                    <h1>Bem vindo!</h1>
+                    <p>Registre suas informações para ter acesso ao site</p>
+                    <button class="hidden" id="register">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

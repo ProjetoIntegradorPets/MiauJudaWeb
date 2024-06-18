@@ -1,3 +1,4 @@
+import {destroyError, addError} from './utils.js';
 
 /*----------------- SWAP Pages Config -----------------*/
 const container = document.getElementById('container');
@@ -15,56 +16,60 @@ loginBtn.addEventListener('click', () => {
 /*----------------- Sing Up Config -----------------*/
 
 // variables
-const uNameIN = document.getElementById("uNameIN");
-const uNameUP = document.getElementById("uNameUP");
+const uName = document.getElementById("uName");
 
-const uEmail = document.getElementById("uEmail");
+// AJEITAR REGEX!!!!!!!!!!!!!!!!!!
+const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/;
+const uEmailIN = document.getElementById("uEmailIN");
+const uEmailUP = document.getElementById("uEmailUP");
 
 const uPassIN = document.getElementById("uPassIN");
 const uPassUP = document.getElementById("uPassUP");
 
 const uCPass = document.getElementById("uCPass");
-const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/;
 
 // dynamic event listeners
-uNameIN.addEventListener('input', () => {
-    validateName('IN');
+uName.addEventListener('input', validateName);
+uEmailIN.addEventListener('input', () => {
+    validateEmail('IN');
 });
-uNameUP.addEventListener('input', () => {
-    validateName('UP');
+uEmailUP.addEventListener('input', () => {
+    validateEmail('UP');
 });
-uEmail.addEventListener('input', validateEmail);
 
 // uPass.addEventListener('input', validatePass);
 
 // uCPass.addEventListener('input', validateCPass);
 
 // functions
-function validateName(type){
-    let nameELEMENT = document.getElementById('uName' + type);
-    let name = nameELEMENT.value;
+function validateName(){
+    let name = uName.value;
 
-    if(name === '' || name.length < 6){
+    if(name === ''){
         nameELEMENT.style.border = "1px solid red";
-        // erro
+    }
+    if(name.length < 6) {
+        nameELEMENT.style.border = "1px solid red";
     }
     else{
         nameELEMENT.style.border = "1px solid green";
     }
 }
 
-function validateEmail(){
-    let email = email.value;
+function validateEmail(type){
+    let emailELEMENT = document.getElementById('uEmail' + type);
+    let email = emailELEMENT.value;
 
-    if(email === ''){
-        uEmail.style.border = "1px solid red";
-        // erro
-    }
     if(emailRegex.test(email)){
-        uEmail.style.border = "1px solid green";
+        emailELEMENT.style.border = "1px solid green";
+        destroyError(emailELEMENT);
     }
     else{
-        uEmail.style.border = "1px solid red";
-        // erro
+        emailELEMENT.style.border = "1px solid red";
+        addError('Email inválido!', emailELEMENT);
+    }
+    if(email === ''){
+        emailELEMENT.style.border = "1px solid red";
+        addError('Digite um email!', emailELEMENT);
     }
 }

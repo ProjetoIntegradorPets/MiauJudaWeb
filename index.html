@@ -11,7 +11,7 @@
 
     <title>MIAUjuda</title>
 
-    <script src="assets/js/index.js" defer></script>
+    <script type="module" src="assets/js/index.js" defer></script>
 </head>
 <body>
     <!-- CONTAINER -->
@@ -41,15 +41,14 @@
 
                 <span>ou use seu email para cadastro</span>
                 <!-- INPUT DE INSCRICAO -->
-                <input type="text" placeholder="Nome" id="uNameUP">
-                <span class="input_error">Not a valid Email</span>
-                <input type="email" placeholder="Email" id="uEmail">
+                <input type="text" placeholder="Nome" id="uName">
+                <input type="email" placeholder="Email" id="uEmailUP">
                 <input type="password" placeholder="Senha" id="uPassUP">
                 <input type="password" placeholder="Confirmar senha" id="uCPass">
                 
 
                 <!-- BOTAO DE CADASTRAR -->
-                    <button id="btn2" class="btn_sub" onclick="singUp()">Registre-se</button>
+                    <button id="btn2 sUP" class="btn_sub" onclick="singUp()">Registre-se</button>
                 <!-- <a id="btn2" class="btn_sub" href="inicio.html">Registre-se</a> -->
 
             </form>
@@ -80,14 +79,14 @@
 
                 <span>ou use a senha do seu email</span>
                 <!-- INPUT DE LOGIN -->
-                <input type="text" placeholder="Nome" id="uNameIN">
+                <input type="email" placeholder="Email" id="uEmailIN">
                 <input type="password" placeholder="Senha" id="uPassIN">
                 
                 <!-- ESQUECEU SENHA -->
                 <a href="#" class="password">Esqueceu a Senha?</a>
                 
                 <!-- BTN DE LOGIN -->
-                <button id="btn2" class="btn_sub" onclick="singIn()">Login</button>
+                <button id="btn2 sIN" class="btn_sub" onclick="singIn()">Login</button>
                 <!-- <a id="btn2" class="btn_sub" href="inicio.html">Login</a> -->
             </form>
         </div>

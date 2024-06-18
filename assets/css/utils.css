@@ -20,9 +20,6 @@
     --hfLetter: var(--cor2);
     --icon_path: "assets/img/patasfundo.png";
     --logo_path: "assets/img/logofundoremovido.png";
-
-    --invalidInput: rgb(255, 68, 68);
-    --validInput: rgb(0, 126, 0);
 }
 body {
     background: linear-gradient(to right, #f1e9d4, #fce7af);
@@ -35,6 +32,7 @@ body {
     visibility: hidden;
     margin-left: -17vh;
     margin-top: -.6vh;
+    color: red;
 }
 
 /* SCROLL BAR CUSTOM */

@@ -99,7 +99,7 @@ function validateEmail(type){
     }
 }
 
-function validatePass(type){
+function validatePass(){
     // get the page (Sign IN or Sign UP) of the password
     const passELEMENT = document.getElementById('uPass' + isUPorIN);
     const pass = passELEMENT.value;
@@ -126,7 +126,7 @@ function validateCPass(){
     uCPass.style.border = "1px solid green"
     destroyError(uCPass, 'input_error');
 
-    if (cPass !== pass || cPass === null || cPass == ''){
+    if (cPass !== pass || cPass == ''){
         uCPass.style.border = "1px solid red";
         addError('Senhas não conferem!', uCPass);
     }
@@ -138,16 +138,16 @@ function signUP(){
     validateEmail();
     validatePass();
     validateCPass();
-    validateForms('UP');
+    validateForms();
 }
 
 function signIN(){
     validateEmail();
     validatePass();
-    validateForms('IN');
+    validateForms();
 }
 
-function validateForms(type){
+function validateForms(){
     let hasInvalidInputs = false;
     let inputs = document.getElementsByClassName('input_sign' + isUPorIN);
 
@@ -161,7 +161,7 @@ function validateForms(type){
     // if not exist invalid inputs
     if(!hasInvalidInputs) {
         // sign up method
-        if(type == 'UP'){
+        if(isUPorIN == 'UP'){
             trySignUP();
         }
         // sign in method

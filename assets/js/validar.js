@@ -3,6 +3,11 @@ import {destroyError, addError} from './utils.js';
 // variable to define if is signIN or signUP
 let isUPorIN = 'IN';
 
+// data_base user
+const db = localStorage.getItem('user_data');
+const users = JSON.parse(db) || [];
+
+
 /*----------------- SWAP Pages Config -----------------*/
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
@@ -16,8 +21,6 @@ registerBtn.addEventListener('click', () => {
     container.classList.remove("active");
     isUPorIN = 'IN';
 });
-
-
 
 
 /*----------------- variables -----------------*/
@@ -34,21 +37,23 @@ const uCPass = document.getElementById("uCPass");
 
 
 /*----------------- event listeners -----------------*/
-uName.addEventListener('input', validateName);
-uEmailIN.addEventListener('input', validateEmail);
-uEmailUP.addEventListener('input', validateEmail);
-uPassIN.addEventListener('input', validatePass);
-uPassUP.addEventListener('input', validatePass);
-uCPass.addEventListener('input', validateCPass);
+if (uName) uName.addEventListener('input', validateName);
+if (uEmailIN) uEmailIN.addEventListener('input', validateEmail);
+if (uEmailUP) uEmailUP.addEventListener('input', validateEmail);
+if (uPassIN) uPassIN.addEventListener('input', validatePass);
+if (uPassUP) uPassUP.addEventListener('input', validatePass);
+if (uCPass) uCPass.addEventListener('input', validateCPass);
+
 forms.forEach(e => {
     e.addEventListener('submit', j => {
         j.preventDefault();
-    })
-})
+    });
+});
+
 // sign up button
-buttons[0].addEventListener('click', signUP);
+if (buttons[0]) buttons[0].addEventListener('click', signUP);
 // sign in button
-buttons[1].addEventListener('click', signIN);
+if (buttons[1]) buttons[1].addEventListener('click', signIN);
 
 
 /*----------------- validate functions -----------------*/
@@ -98,18 +103,17 @@ function validatePass(type){
     // get the page (Sign IN or Sign UP) of the password
     const passELEMENT = document.getElementById('uPass' + isUPorIN);
     const pass = passELEMENT.value;
-    
     passELEMENT.style.border = "1px solid green";
     destroyError(passELEMENT, 'input_error');
-
+    
     // min length
-    if (pass.length < 8){
+    if (pass.length < 8 && isUPorIN === 'UP'){
         passELEMENT.style.border = "1px solid red";
         addError('Tamanho mínimo: 8 caracteres!', passELEMENT);
     }
 
     // if is empty
-    if(pass === '' || pass === null){
+    if(pass === ''){
         passELEMENT.style.border = "1px solid red";
         addError('Digite uma senha!', passELEMENT);
     }
@@ -134,16 +138,16 @@ function signUP(){
     validateEmail();
     validatePass();
     validateCPass();
-    validateForms();
+    validateForms('UP');
 }
 
 function signIN(){
     validateEmail();
     validatePass();
-    validateForms();
+    validateForms('IN');
 }
 
-function validateForms(){
+function validateForms(type){
     let hasInvalidInputs = false;
     let inputs = document.getElementsByClassName('input_sign' + isUPorIN);
 
@@ -154,8 +158,70 @@ function validateForms(){
         }
     });
 
-    // if not exist
+    // if not exist invalid inputs
     if(!hasInvalidInputs) {
+        // sign up method
+        if(type == 'UP'){
+            trySignUP();
+        }
+        // sign in method
+        else{
+            trySignIN();
+        }
+    }
+}
+
+function trySignUP(){
+    // verify if email already exists
+    if(emailAE()) { 
+        addError('Email já cadastrado!', document.getElementById('btn2 sUP'));
+    }
+    else{ 
+        // push data to database
+        pushUserData();
         window.location.href = "index.html";
+    }
+}
+
+function emailAE(){
+    let aExists = false;
+    users.forEach(u => {
+        if(u.email === uEmailUP.value){
+            aExists = true;
+        }
+    })
+    return aExists;
+}
+
+function pushUserData(){
+    const user = {
+        name: uName.value,
+        email: uEmailUP.value,
+        pass: uPassUP.value
+    }
+
+    // save user_data on localStorage
+    users.push(user);
+    localStorage.setItem('user_data', JSON.stringify(users));
+    localStorage.setItem('login_status', "true");
+}
+
+function trySignIN(){
+    const email = uEmailIN.value;
+    const pass = uPassIN.value;
+    let login_s = false;
+    
+    // compare pass and email
+    users.forEach(u => {
+        if(u.email === email && u.pass === pass){
+            login_s = true;
+        }
+    })
+
+    if (login_s) {
+        window.location.href = 'index.html';
+    }
+    else{
+        addError('Email ou senha incorretos!', document.getElementById('btn2 sIN'));
     }
 }

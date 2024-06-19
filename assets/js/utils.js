@@ -14,22 +14,24 @@ export function createError(msg){
     return el
 }
 
-// add error if not exists
-export function addError(msg, ref){
-    if(verifyNextElement(ref, 'input_error', false)) {
-        insertAfter(createError(msg), ref);
-    }else{
+// add error if not exists // cl = classe
+export function addError(msg, ref, cl = 'input_error'){
+    // verify if next element exists and has a class CL
+    if(ref.nextElementSibling && verifyClass(ref, cl)) {
         ref.nextElementSibling.textContent = msg;
+    }
+    else{
+        // create error message
+        insertAfter(createError(msg), ref);
     }
 }
 
 // destroy error if exists 
 export function destroyError(ref, cl){
-    if (verifyNextElement(ref, cl, true)) return ref.nextElementSibling.remove();
+    if (verifyClass(ref, cl)) return ref.nextElementSibling.remove();
 }
 
-// verify nextElement exists && verify the name of the class
-export function verifyNextElement(ref, cl, contains){
-    if (contains) {return ref.nextElementSibling && ref.nextElementSibling.classList.contains(cl);}
-    else{return ref.nextElementSibling && !ref.nextElementSibling.classList.contains(cl);}
+// Compare class name
+export function verifyClass(ref, cl){
+    if(ref.nextElementSibling) return ref.nextElementSibling.classList.contains(cl);
 }

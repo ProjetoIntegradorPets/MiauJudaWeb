@@ -74,7 +74,7 @@ nav .logo{
 nav ul {
     list-style: none;
 }
-nav ul li a {
+nav ul li a, nav ul li .cad_button {
     color: var(--hfLetter);
     display: block;
     margin: 0 2px;
@@ -83,29 +83,55 @@ nav ul li a {
     transition: 0.2s;
     border-radius: 30px;
 }
-nav ul li a:hover {
+nav ul li a:hover, nav ul li .cad_button:hover {
     background: #f8f4e9;
+    cursor: pointer;
 }
 nav ul li {
     position: relative;
     float: left;
 }
-nav #drop{
-    color: white;
+/* DROPDOWN MENU */
+.dropdown{
+    user-select: none;
 }
-nav ul li #drop:hover {
-    background: var(--cor2);
-}
-nav ul li ul {
-    position: absolute;
-    width: 160%;    
-    background: var(--cor3);
+#cad_adocao,
+#cad_perdido,
+#checkbox{
     display: none;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
-nav ul li:hover ul {
+.dropdown_list_container{
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: var(--cor3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    /* padding: .6vh; */
+}
+.dropdown_list{
+    width: 100%;
+    /* height: 100%; */
+}
+.dropdown_list li{
+    padding: .5vh 0;
+    width: 17vh;
+}
+.dropdown_list a{
+    color: black;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    /* padding: .3vh 0; */
+    padding: .3vh 0;
+    border-radius: 5px;
+}
+/* DROPDOWN ACTIONS */
+#checkbox:checked~.cad_button{
+    outline: 0.0625em solid var(--cor1);
+    outline-offset: 0.0625em;
+}
+#checkbox:checked~.dropdown_list_container{
     display: block;
 }
 /* NAVBAR RESPONSIVA */

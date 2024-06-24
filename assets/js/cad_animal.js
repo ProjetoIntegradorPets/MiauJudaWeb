@@ -1,3 +1,6 @@
+import {destroyError, addError} from './utils.js';
+
+/*----------------- SWAP type button -----------------*/
 function change(v){
     if(v){
         document.getElementsByClassName('btn_tipo')[1].id = 'clicked'
@@ -9,6 +12,8 @@ function change(v){
     }
 }
 
+
+/*----------------- Upload images -----------------*/
 const selectImage = document.querySelector('.select-image');
 const inputFile = document.querySelector('#file');
 const imgArea = document.querySelector('.img-area');
@@ -39,3 +44,26 @@ inputFile.addEventListener('change', function () {
     }
     reader.readAsDataURL(image);
 })
+
+
+/*----------------- Submit -----------------*/
+const form = document.getElementById('form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    if(check_sexo()){
+        addError("Selecione um sexo", document.querySelector('.radio-button-container'));
+    }
+});
+
+
+// if checked return true
+function check_sexo(){
+    let sexo = document.querySelectorAll('input[type="radio"]');
+
+    sexo.forEach(e => {
+        if(!e.checked) return false;
+    });
+
+    return true;
+}

@@ -11,7 +11,7 @@
 
     <title>Cadastro Adoção</title>
 
-    <script src="assets/js/cad_animal.js" defer></script>
+    <script type="module" src="assets/js/cad_animal.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -49,7 +49,7 @@
 
     <!-- CONTAINER -->
     <section class="container c1">
-        <form action="">
+        <form action="" method="post" id="form">
             <!-- DIV BLOCO 01 -->
             <div class="bloco1">
 
@@ -84,7 +84,8 @@
 
                     <!-- NOME  -->
                 <div class="input-container">
-                    <input type="text" id="input" required class="nome">
+                    <input type="text" id="nome" required oninvalid="this.setCustomValidity('Digite um nome!')" 
+                    onchange="try{setCustomValidity('')}catch(e){}" class="nome">
                     <label for="input" class="label">Nome do animal</label>
                     <div class="underline" id="input_under"></div>
                 </div>
@@ -105,35 +106,38 @@
                         </label>
                     </div>
                 </div>
-                    
                     <!-- PESO -->
                 <div class="input-container">
-                    <input type="number" id="input" required class="peso" min="0">
+                    <input type="number" id="peso" required oninvalid="this.setCustomValidity('Digite um peso!')" 
+                    onchange="try{setCustomValidity('')}catch(e){}" class="peso" min="0">
                     <label for="input" class="label">Peso do animal (kg)</label>
                     <div class="underline" id="input_under"></div>
                 </div>
                     <!-- TAMANHO -->
                 <div class="input-container">
-                    <input type="number" id="input" required class="tamanho" min="0">
+                    <input type="number" id="tamanho" required oninvalid="this.setCustomValidity('Digite um tamanho!')" 
+                    onchange="try{setCustomValidity('')}catch(e){}" class="tamanho" min="0">
                     <label for="input" class="label">Tamanho do animal (cm)</label>
                     <div class="underline" id="input_under"></div>
                 </div>
                     <!-- RACA -->
                 <div class="input-container">
-                    <input type="text" id="input" required class="raca">
+                    <input type="text" id="raca" required oninvalid="this.setCustomValidity('Digite uma raça!')" 
+                    onchange="try{setCustomValidity('')}catch(e){}" class="raca">
                     <label for="input" class="label">Raça do animal</label>
                     <div class="underline" id="input_under"></div>
                 </div>
                     <!-- DESCRICAO -->
                 <div class="input-container">
-                    <textarea id="text" required></textarea>
+                    <textarea id="text" required oninvalid="this.setCustomValidity('Digite uma descrição!')" 
+                    onchange="try{setCustomValidity('')}catch(e){}"></textarea>
                     <label for="text" class="label">Descrição do animal</label>
                     <div class="underline" id="tarea"></div>
                 </div>
 
                 <!-- BOTAO CADASTRAR -->
                 <div class="btn_cad">
-                    <button type="submit" class="cadastrar">CADASTRAR</button>
+                    <button type="submit" class="cadastrar" id="cadastrar">CADASTRAR</button>
                     <!-- window.location.href = "perfil_adocao.html"; -->
                 </div>
             </div>

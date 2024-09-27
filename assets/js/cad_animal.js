@@ -51,9 +51,11 @@ const form = document.getElementById('form');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    if(check_sexo()){
+    if(!check_sexo()){
         addError("Selecione um sexo", document.querySelector('.radio-button-container'));
+        return;
     }
+    window.location.href = "perfil_adocao.html";
 });
 
 

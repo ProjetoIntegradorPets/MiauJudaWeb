@@ -79,35 +79,6 @@ hr{
 }
 
 
-/* SECTION - CADASTRAR ANIMAIS */
-.botoes_cadastro {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.btn_cad {
-    text-transform: uppercase;
-    color: #fff;
-    background-color: var(--cor1);
-    border-radius: 20px;
-    border: 1px solid transparent;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    font-size: 14px;
-    padding: 1.2vh 2vh;
-    font-weight: 500;
-    margin-left: 1em;
-    transition: all 0.3s ease 0s;
-}
-
-.btn_cad:hover {
-    background: var(--cor2);
-    box-shadow: 0px 15px 20px var(--cor2);
-    color: #fff;
-    transform: translateY(-7px);
-}
-
 /* SECTION - EDITAR PERFIL*/
 .btn{
     display: flex;

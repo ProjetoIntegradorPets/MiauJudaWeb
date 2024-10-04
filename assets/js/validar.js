@@ -64,9 +64,9 @@ function validateName(){
     destroyError(uName, 'input_error');
 
     // verify if the name is valid
-    if(name.length < 6){
+    if(name.length < 3){
         uName.style.border = "1px solid red";
-        addError('Tamanho mínimo: 6 caracteres!', uName);
+        addError('Tamanho mínimo: 3 caracteres!', uName);
     }
 
     // verify if the name is empty

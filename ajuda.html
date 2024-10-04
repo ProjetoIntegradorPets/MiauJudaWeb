@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
 
     <script src="assets/js/index.js" defer></script>
 </head>
@@ -69,6 +71,27 @@
                 <button class="help-button">QUERO AJUDAR</button>
             </section>
 
+            <section id="helpModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div class="l1">
+                        <br>
+                        <h2>O que se classifica como maus tratos?</h2><br>
+                        <p>Abandono, envenenamento, confinamento constante em correntes ou cordas muito curtas, manutenção em locais anti-higiênicos, mutilação, confinamento em espaços incompatíveis com seu porte ou sem adequada iluminação e ventilação, participação em eventos que possam causar danos físicos, pânico ou estresse, agressão física, submissão a esforço excessivo (tração), participação em rinhas, entre outros.</p><br>
+                    </div>
+            
+                    <!-- TOPICO 2 -->
+                    <h2>Para quem ligar?</h2><br>
+                    <div class="l2">
+                        <p><i class="fa">&#xf1b0</i> Núcleo de Proteção aos Animais (NPA)</p>
+                        <p><i class="fa">&#xf1b0</i> Delegacia de Meio Ambiente (tel.: (27) 3236-8136)</p>
+                        <p><i class="fa">&#xf1b0</i> Assembleia Legislativa do ES – Comissão de Maus Tratos a Animais (E-mail: defesadosanimaises@gmail.com)</p>
+                        <p><i class="fa">&#xf1b0</i> Polícia Militar (tel.: 190)</p>
+                        <p><i class="fa">&#xf1b0</i> Ouvidoria do Ministério Público do ES (Tel.: (27) 3194-4500)</p>
+                    </div>
+                </div>
+            </section>
+
             <section class="lost-pets">
                 <h2>Animais perdidos!</h2><br>
                 <div class="tabs">
@@ -84,12 +107,10 @@
                 </div>
             </section>
 
-            <div class="floating-button help-button" id="addPetButton">+</div>
-
             <section id="addPetModal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2>Cadastrar Novo Pet</h2>
+                    <h2>Cadastrar um Pet Perdido</h2>
                     <form id="addPetForm">
                         <div class="form-group">
                             <label for="petName">Nome do Pet:</label>
@@ -125,6 +146,17 @@
                     <button id="deletePetButton" class="delete-button">Excluir Pet</button>
                 </div>
             </section>
+
+            <div class="addButton">
+                <button class="addButton-btn" onclick="toggleAddButton()">+</button>
+                <div id="addButton-content" class="addButton-content">
+                    <b>cadastrar</b>
+                    <b>animal</b>
+                    <br><hr>
+                    <p>ADOÇÃO</p>
+                    <p>PERDIDO</p>
+                </div>
+            </div>
         </main>
         
 

@@ -6,16 +6,16 @@ function toggleAddButton() {
     } else {
       addButton.classList.add('show');
     }
-    document.addEventListener('click', closeAddButtonOnClickOutside);
+    document.addEventListener('click', closeOnClickOutside);
 }
 
-function closeAddButtonOnClickOutside(event) {
+function closeOnClickOutside(event) {
     var addButton = document.getElementById("addButton-content");
     
     if (!addButton.contains(event.target) && !event.target.matches('.addButton-btn')) {
       addButton.classList.remove('show');
       
-      document.removeEventListener('click', closeAddButtonOnClickOutside);
+      document.removeEventListener('click', closeOnClickOutside);
     }
   }
 
@@ -46,8 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeButtons = document.querySelectorAll('.close-button')
 
-    const addPetButton = document.getElementById('addPetButton');
+    // const addPetButton = document.getElementById('addPetButton');
     const addPetModal = document.getElementById('addPetModal');
+
+    const helpButton = document.querySelector('.help-button');
+    const helpModal = document.getElementById('helpModal');
 
     const petDetailsModal = document.getElementById('petDetailsModal');
     const petDetailsName = document.getElementById('petDetailsName');
@@ -72,16 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // addPetButton.addEventListener('click', () => {
     //     addPetModal.style.display = 'block';
     // });
+    if(helpButton) helpButton.addEventListener('click', () => {
+        helpModal.style.display = 'block';
+    });
     // Close Buttons
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
+            
             addPetModal.style.display = 'none';
             document.getElementById('petName').value = '';
             document.getElementById('petType').selectedIndex = 0;
             document.getElementById('petLocation').value = '';
             document.getElementById('petImage').value = '';
-
+            
             petDetailsModal.style.display = 'none';
+            helpModal.style.display = 'none'; 
         });
     });
 

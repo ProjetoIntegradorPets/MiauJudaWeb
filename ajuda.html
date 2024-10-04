@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
 
     <script src="assets/js/index.js" defer></script>
 </head>
@@ -72,16 +74,21 @@
             <section id="helpModal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2>Como Ajudar</h2>
-                    <p>Se você encontrou um animal em situação de vulnerabilidade, siga estes passos:</p>
-                    <ol>
-                        <li>Garanta a segurança do animal e a sua própria</li>
-                        <li>Verifique se o animal está ferido ou precisa de cuidados imediatos</li>
-                        <li>Tente localizar o dono, se possível</li>
-                        <li>Entre em contato com as autoridades locais ou uma organização de resgate animal</li>
-                        <li>Forneça abrigo temporário, se possível, até que o animal possa ser resgatado</li>
-                    </ol>
-                    <p>Lembre-se: sua ajuda pode salvar uma vida!</p>
+                    <div class="l1">
+                        <br>
+                        <h2>O que se classifica como maus tratos?</h2><br>
+                        <p>Abandono, envenenamento, confinamento constante em correntes ou cordas muito curtas, manutenção em locais anti-higiênicos, mutilação, confinamento em espaços incompatíveis com seu porte ou sem adequada iluminação e ventilação, participação em eventos que possam causar danos físicos, pânico ou estresse, agressão física, submissão a esforço excessivo (tração), participação em rinhas, entre outros.</p><br>
+                    </div>
+            
+                    <!-- TOPICO 2 -->
+                    <h2>Para quem ligar?</h2><br>
+                    <div class="l2">
+                        <p><i class="fa">&#xf1b0</i> Núcleo de Proteção aos Animais (NPA)</p>
+                        <p><i class="fa">&#xf1b0</i> Delegacia de Meio Ambiente (tel.: (27) 3236-8136)</p>
+                        <p><i class="fa">&#xf1b0</i> Assembleia Legislativa do ES – Comissão de Maus Tratos a Animais (E-mail: defesadosanimaises@gmail.com)</p>
+                        <p><i class="fa">&#xf1b0</i> Polícia Militar (tel.: 190)</p>
+                        <p><i class="fa">&#xf1b0</i> Ouvidoria do Ministério Público do ES (Tel.: (27) 3194-4500)</p>
+                    </div>
                 </div>
             </section>
 
@@ -103,7 +110,7 @@
             <section id="addPetModal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2>Cadastrar Novo Pet</h2>
+                    <h2>Cadastrar um Pet Perdido</h2>
                     <form id="addPetForm">
                         <div class="form-group">
                             <label for="petName">Nome do Pet:</label>
@@ -141,7 +148,7 @@
             </section>
 
             <div class="addButton">
-                <button class="addButton-btn" onclick="toggleaddButton()">+</button>
+                <button class="addButton-btn" onclick="toggleAddButton()">+</button>
                 <div id="addButton-content" class="addButton-content">
                     <b>cadastrar</b>
                     <b>animal</b>

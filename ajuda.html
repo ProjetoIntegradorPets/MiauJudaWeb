@@ -69,6 +69,22 @@
                 <button class="help-button">QUERO AJUDAR</button>
             </section>
 
+            <section id="helpModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Como Ajudar</h2>
+                    <p>Se você encontrou um animal em situação de vulnerabilidade, siga estes passos:</p>
+                    <ol>
+                        <li>Garanta a segurança do animal e a sua própria</li>
+                        <li>Verifique se o animal está ferido ou precisa de cuidados imediatos</li>
+                        <li>Tente localizar o dono, se possível</li>
+                        <li>Entre em contato com as autoridades locais ou uma organização de resgate animal</li>
+                        <li>Forneça abrigo temporário, se possível, até que o animal possa ser resgatado</li>
+                    </ol>
+                    <p>Lembre-se: sua ajuda pode salvar uma vida!</p>
+                </div>
+            </section>
+
             <section class="lost-pets">
                 <h2>Animais perdidos!</h2><br>
                 <div class="tabs">
@@ -83,8 +99,6 @@
                     <!-- Pagination buttons will be dynamically inserted here -->
                 </div>
             </section>
-
-            <div class="floating-button help-button" id="addPetButton">+</div>
 
             <section id="addPetModal" class="modal">
                 <div class="modal-content">
@@ -125,6 +139,17 @@
                     <button id="deletePetButton" class="delete-button">Excluir Pet</button>
                 </div>
             </section>
+
+            <div class="addButton">
+                <button class="addButton-btn" onclick="toggleaddButton()">+</button>
+                <div id="addButton-content" class="addButton-content">
+                    <b>cadastrar</b>
+                    <b>animal</b>
+                    <br><hr>
+                    <p>ADOÇÃO</p>
+                    <p>PERDIDO</p>
+                </div>
+            </div>
         </main>
         
 

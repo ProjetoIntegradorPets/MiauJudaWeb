@@ -53,7 +53,6 @@ main {
     background-color: #E65100;
 }
 
-
 .lost-pets {
     width: 100%;
     min-height: 80vh;
@@ -157,12 +156,27 @@ main {
     color: white;
 }
 
-.floating-button {
+b, hr{
+    color: #FF6B00;
+}
+hr{
+    margin-top: 10px;
+}
+
+.addButton {
+    position: relative;
+    display: inline-block;
     position: fixed;
-    bottom: 70px;
-    right: 20px;
+    bottom: 80px;
+    right: 40px;
     width: 50px;
     height: 50px;
+}
+  
+.addButton-btn {
+    border: none;
+    width: 68px;
+    height: 68px;
     background-color: #FF6B00;
     color: white;
     border-radius: 50%;
@@ -174,10 +188,49 @@ main {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
-.floating-button:hover {
+  
+.addButton-btn:hover {
     background-color: #E65100;
     transform: scale(1.1);
+}
+
+.addButton-content {
+    visibility: hidden;
+    width: 145px;
+    background-color: white;
+    color: rgb(70, 63, 52);
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    font-weight: 900;
+    font-size: large;
+    top: 50%;
+    left: -150px; /* Alinha à esquerda do botão */
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+  
+.addButton-content p {
+    margin: 0;
+    padding: 10px 0;
+    cursor: pointer;
+    margin: 3px;
+    background-color: #F0F0F0;
+    border-radius: 5%;
+}
+  
+.addButton-content p:hover {
+    background-color: #dbdbdb;
+}
+  
+  /* Quando ativo, mostra a addButton */
+.addButton-content.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 .modal {

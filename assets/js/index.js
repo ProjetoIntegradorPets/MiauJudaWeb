@@ -1,3 +1,24 @@
+// ADD button
+function toggleAddButton() {
+    var addButton = document.getElementById("addButton-content");
+    if (addButton.classList.contains('show')) {
+      addButton.classList.remove('show');
+    } else {
+      addButton.classList.add('show');
+    }
+    document.addEventListener('click', closeAddButtonOnClickOutside);
+}
+
+function closeAddButtonOnClickOutside(event) {
+    var addButton = document.getElementById("addButton-content");
+    
+    if (!addButton.contains(event.target) && !event.target.matches('.addButton-btn')) {
+      addButton.classList.remove('show');
+      
+      document.removeEventListener('click', closeAddButtonOnClickOutside);
+    }
+  }
+
 document.addEventListener('DOMContentLoaded', () => {
     let pets = JSON.parse(localStorage.getItem('pets')) || [
         { id: 1, name: 'Luna', location: 'São Paulo, SP', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
@@ -48,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Display Block
-    addPetButton.addEventListener('click', () => {
-        addPetModal.style.display = 'block';
-    });
+    // addPetButton.addEventListener('click', () => {
+    //     addPetModal.style.display = 'block';
+    // });
     // Close Buttons
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {

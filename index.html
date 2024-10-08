@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/utils.css">
 
+    <script src="assets/js/logged.js" defer></script>
     <script src="assets/js/index.js" defer></script>
 </head>
 <body>
@@ -49,7 +50,7 @@
         </header>
     
         <main>
-            <section class="lost-pets">
+            <section class="section-pets">
                 <h2>Animais para Adoção!</h2><br>
                 <div class="tabs">
                     <button class="tab-button active" data-tab="todos">TODOS</button>
@@ -64,7 +65,19 @@
                 </div>
             </section>
 
-            <section id="addPetModal" class="modal">
+            <section id="petDetailsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2 id="petDetailsName"></h2>
+                    <img id="petDetailsImage" src="" alt="Pet Image" class="pet-details-image">
+                    <p id="petDetailsLocation"></p>
+                    <p id="petDetailsType"></p>
+                    <button id="petButton" class="adotar-button">Adotar Pet</button>
+                    <button id="petButton" class="delete-button">Excluir Pet</button>
+                </div>
+            </section>
+
+            <section id="addPetModal_cadPerdido" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
                     <h2>Cadastrar Pet Perdido</h2>
@@ -97,14 +110,36 @@
                 </div>
             </section>
 
-            <section id="petDetailsModal" class="modal">
+            <section id="addPetModal_cadAdocao" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2 id="petDetailsName"></h2>
-                    <img id="petDetailsImage" src="" alt="Pet Image" class="pet-details-image">
-                    <p id="petDetailsLocation"></p>
-                    <p id="petDetailsType"></p>
-                    <button id="deletePetButton" class="delete-button">Excluir Pet</button>
+                    <h2>Cadastrar Pet Adoção</h2>
+                    <form id="addPetForm">
+                        <div class="form-group">
+                            <label for="petName">Nome do Pet:</label>
+                            <input type="text" id="petName" name="petName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petType">Tipo:</label>
+                            <select id="petType" name="petType" required>
+                                <option value="dog">Cão</option>
+                                <option value="cat">Gato</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="petDescription">Descrição:</label>
+                            <input type="text" id="petDescription" name="petDescription" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petLocation">Última Localização:</label>
+                            <input type="text" id="petLocation" name="petLocation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petImage">URL da Imagem:</label>
+                            <input type="url" id="petImage" name="petImage" required>
+                        </div>
+                        <button type="submit" class="submit-button">Cadastrar Pet</button>
+                    </form>
                 </div>
             </section>
 
@@ -114,8 +149,8 @@
                     <b>cadastrar</b>
                     <b>animal</b>
                     <br><hr>
-                    <p id="cadAdocaoBtn">ADOÇÃO</p>
-                    <p id="cadPerdidoBtn">PERDIDO</p>
+                    <p id="cadAdocao" class="add_btns">ADOÇÃO</p>
+                    <p id="cadPerdido" class="add_btns">PERDIDO</p>
                 </div>
             </div>
         </main>

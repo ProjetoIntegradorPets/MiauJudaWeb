@@ -35,19 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 12, name: 'Loki', location: 'Belém, PA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
     ];
 
-    // ================ Global variables
+    // ================ Page variables
     const petsPerPage = 8;
     let currentPage = 1;
     let currentFilter = 'todos';
 
-    // ================ Init variables
+    // ================ Config variables
     const petList = document.getElementById('petList');
     const tabButtons = document.querySelectorAll('.tab-button');
 
     const closeButtons = document.querySelectorAll('.close-button')
 
-    const addPetButton = document.getElementById('addButton-btn');
-    const addPetModal = document.getElementById('addPetModal');
+    const cadButtons = document.querySelectorAll('.add_btns');
+    const addPetModal = document.querySelectorAll('.modal');
+    const addPetForm = document.getElementById('addPetForm');
 
     const helpButton = document.querySelector('.help-button');
     const helpModal = document.getElementById('helpModal');
@@ -72,26 +73,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Display Block
-    addPetButton.addEventListener('click', () => {
-        // addPetModal.style.display = 'block';
-    });
+    cadButtons.forEach((e) => {
+        e.addEventListener('click', () => {
+            if (login_status === 'true'){ // login_status from logged.js
+                const mod = document.getElementById(`addPetModal_${e.id}`);
+                mod.style.display = 'block';
+            }else{
+                window.location.href = "validar.html";
+            }
+        });
+    })
+
     if(helpButton) helpButton.addEventListener('click', () => {
         helpModal.style.display = 'block';
     });
+
     // Close Buttons
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            
-            addPetModal.style.display = 'none';
-            document.getElementById('petName').value = '';
-            document.getElementById('petType').selectedIndex = 0;
-            document.getElementById('petLocation').value = '';
-            document.getElementById('petImage').value = '';
+            if (addPetModal) addPetModal.forEach((e) => {
+                e.style.display = 'none';
+                if (e.id.substring(0, 12) === 'addPetModal')
+                e.reset();
+            });
             
             petDetailsModal.style.display = 'none';
-            helpModal.style.display = 'none'; 
+            if(helpModal) helpModal.style.display = 'none'; 
         });
     });
+
+    // Create pet - SUBMIT FORM
+    addPetForm.addEventListener('submit', (e) => addNewPet(e));
 
     // ================ Functions
     function renderPets(){
@@ -183,6 +195,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 petDetailsModal.style.display = 'none';
             }
         };
+    }
+
+    function savePetsToLocalStorage() {
+        localStorage.setItem('pets', JSON.stringify(pets));
+    }
+ 
+    function addNewPet(e) {
+        e.preventDefault();
+        const newPet = {
+            id: Date.now(),
+            name: document.getElementById('petName').value,
+            type: document.getElementById('petType').value,
+            description: document.getElementById('petDescription').value,
+            location: document.getElementById('petLocation').value,
+            image: document.getElementById('petImage').value
+        };
+        pets.unshift(newPet);
+        savePetsToLocalStorage();
+        addPetModal.style.display = 'none';
+        currentPage = 1;
+        currentFilter = 'todos';
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabButtons[0].classList.add('active');
+        renderPets();
+        addPetForm.reset();
     }
 
     // ================ Call functions

@@ -10,8 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 5vh;
+    min-height: 80vh;
+    padding: 3vh;
 }
 .background{
     background-color: #fff;
@@ -44,8 +44,8 @@ hr{
 /* SECTION - IMG_USUARIO*/
 .img_area{
     margin: 3vh 0 3vh 1vh;
-    max-width: 50vh;
-    max-height: 70vh;
+    max-width: 40vh;
+    max-height: 60vh;
 }
 .img_perfil{
     border-radius: 3%;
@@ -54,15 +54,15 @@ hr{
     object-fit: cover;
 }
 
-/* SECTION CONTATO  */
-.contato {
+/* SECTION CONTATO, LOC, CURITDAS  */
+.contato, .localizacao, .curtidas {
     display: inline-block;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 0.5vh;
 }
 
-.contato h3, .carac h3 {
+.contato h3, .localizacao h3 {
     color: var(--cor3);
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ hr{
     margin-bottom: 0.75em;
 }
 
-.contato b {
+.contato b, .localizacao b {
     width: 50%;
     margin: 2vh 0 .8vh 0;
     font-size: 15px;
@@ -78,13 +78,12 @@ hr{
     margin-right: 2em;
 }
 
-
 /* SECTION - EDITAR PERFIL*/
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5vh;
+    padding-top: 2vh;
 }
 .btn_editar_perfil {
     padding: 1.3em 3em;
@@ -109,110 +108,6 @@ hr{
 } 
 .btn_editar_perfil:active {
     transform: translateY(-1px);
-}
-
-/*breakpoints*/
-  
-/*medio*/
-@media screen and (min-width: 500px) {
-
-    .card_container {
-        max-width: 60vh;
-    }
-    .cards {
-        margin-inline: 1rem;
-    }
-}
-  
-/*grande*/
-@media screen and (min-width: 800px) {
-    .card_container {
-        max-width: 60vh;
-    }
-}
-
-
-/* SECTION - CAD_ANIMAIS */
-/* SCROLL BAR  */
-.wrapper::-webkit-scrollbar {
-    width: 8px;
-    height: 13px;
-}
-.wrapper::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: var(--cor2);
-}
-
-/* ROLAGEM  */
-.wrapper{
-    display: flex;
-    overflow-x: auto;
-    max-width: 100vh;
-    padding-bottom: 1vh;
-}
-.wrapper article{
-    width: 30vh;
-    margin: 0 1vh;
-}
-
-/* CARD  */
-.artigo_card {
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #ffba44;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.img_card {
-    background-color: #fff;
-    position: relative;
-    
-}
-.img_card img {
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-.card_info {
-    background-color: #ffba44;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    text-align: center;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 10;
-}
-.card_info h3 {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-.card_info a{
-    color: var(--cor2);
-    border: 1px solid var(--cor2);
-    border-radius: 20px;
-    width: 60%;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 0.2em 0.5em;
-    margin-bottom: 0.5em;
-}
-.card_info button {
-    padding: 0.75em 1em;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: white;
-    background: var(--cor2);
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    outline: none;
 }
 
 /* RESPONSIVIDADE */

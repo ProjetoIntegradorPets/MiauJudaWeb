@@ -91,43 +91,6 @@ nav ul li {
     position: relative;
     float: left;
 }
-/* DROPDOWN MENU */
-.dropdown{
-    user-select: none;
-}
-#cad_adocao,
-#cad_perdido,
-#checkbox{
-    display: none;
-}
-.dropdown_list_container{
-    display: none;
-    position: absolute;
-    left: 0;
-    background-color: var(--cor3);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    border-radius: 5px;
-    /* padding: .6vh; */
-}
-
-.dropdown_list li{
-    padding: .5vh 0;
-    width: 17vh;
-}
-.dropdown_list a{
-    color: black;
-    font-weight: 600;
-    /* padding: .3vh 0; */
-    border-radius: 5px;
-}
-/* DROPDOWN ACTIONS */
-#checkbox:checked~.cad_button{
-    outline: 0.0625em solid var(--cor1);
-    outline-offset: 0.0625em;
-}
-#checkbox:checked~.dropdown_list_container{
-    display: block;
-}
 /* NAVBAR RESPONSIVA */
 .mn {
     display: none;

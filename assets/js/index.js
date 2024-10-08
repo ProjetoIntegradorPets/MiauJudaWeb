@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeButtons = document.querySelectorAll('.close-button')
 
-    const addPetButton = document.getElementById('cadPerdidoBtn');
+    const addPetButton = document.getElementById('addButton-btn');
     const addPetModal = document.getElementById('addPetModal');
 
     const helpButton = document.querySelector('.help-button');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Display Block
     addPetButton.addEventListener('click', () => {
-        addPetModal.style.display = 'block';
+        // addPetModal.style.display = 'block';
     });
     if(helpButton) helpButton.addEventListener('click', () => {
         helpModal.style.display = 'block';

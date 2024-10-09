@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cadButtons = document.querySelectorAll('.add_btns');
     const addPetModal = document.querySelectorAll('.modal');
-    const addPetForm = document.getElementById('addPetForm');
+    const addPetForm = document.querySelectorAll('#addPetForm');
 
     const helpButton = document.querySelector('.help-button');
     const helpModal = document.getElementById('helpModal');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const petDetailsImage = document.getElementById('petDetailsImage');
     const petDetailsLocation = document.getElementById('petDetailsLocation');
     const petDetailsType = document.getElementById('petDetailsType');
-    const deletePetButton = document.getElementById('deletePetButton');
+    const deletePetButton = document.querySelector('.delete-button');
 
     // ================ Event Listeners
     // TabButtons switch
@@ -103,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Create pet - SUBMIT FORM
-    addPetForm.addEventListener('submit', (e) => addNewPet(e));
+    addPetForm.forEach(e => e.addEventListener('submit', (j) => addNewPet(j)));
+    
 
     // ================ Functions
     function renderPets(){
@@ -190,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         deletePetButton.onclick = () => {
             if (confirm('Tem certeza que deseja excluir este pet?')) {
                 pets = pets.filter(p => p.id !== pet.id);
-                // savePetsToLocalStorage();
+                savePetsToLocalStorage();
                 renderPets();
                 petDetailsModal.style.display = 'none';
             }
@@ -211,15 +212,19 @@ document.addEventListener('DOMContentLoaded', () => {
             location: document.getElementById('petLocation').value,
             image: document.getElementById('petImage').value
         };
+        
         pets.unshift(newPet);
         savePetsToLocalStorage();
-        addPetModal.style.display = 'none';
+        // MUDAR O CÓDIGO ABAIXO
+        if (addPetModal) addPetModal.forEach((e) => {
+            e.style.display = 'none';
+        });
         currentPage = 1;
         currentFilter = 'todos';
         tabButtons.forEach(btn => btn.classList.remove('active'));
         tabButtons[0].classList.add('active');
         renderPets();
-        addPetForm.reset();
+        addPetForm.forEach(e => e.reset());
     }
 
     // ================ Call functions

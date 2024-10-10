@@ -18,7 +18,41 @@
     <script src="assets/js/perfil_usuario.js" defer></script>
 </head>
 <body>
-    <!-- Header remains unchanged -->
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <div class="logo">
+            <img id="logoss" src="assets/img/logofundoremovido.png">
+        </div>
+        <input type="checkbox" id="nav_check" hidden>
+        <!-- NAVBAR -->
+        <nav>
+            <ul>
+                <!-- ITENS DA NAVBAR -->
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <li>
+                    <a href="ajuda.html">Ajuda</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="pets_usuario.html" id="user_pets">Meus Pets</a>
+                </li>
+                <li>
+                    <a href="validar.html" id="user_txt">Entrar</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- NAVBAR RESPONSIVA -->
+        <label for="nav_check" class="mn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
 
     <!-- CONTAINER -->
     <section class="container">
@@ -45,8 +79,10 @@
                     <!-- CONTATO -->
                     <div class="contato">
                         <h3>FORMAS DE CONTATO</h3>
-                        <b id="user-email">usuario@email.com</b>
-                        <b id="user-phone">(00) 00000-0000</b>
+                        <div class="fcontatos">
+                            <b id="user-email">usuario@email.com</b>
+                            <b id="user-phone">(00) 00000-0000</b>
+                        </div>
                     </div>
                     <hr>
                     <!-- LOCALIZACAO -->
@@ -57,8 +93,8 @@
                     <hr>
                     <!-- PETS E PUBLICACOES CURTIDAS -->
                     <div class="curtidas">
-                        <a href="#">VER ANIMAIS CURTIDOS</a><br>
-                        <a href="#">VER PUBLICAÇÕES CURTIDAS</a>
+                        <a href="#" class="btn_animaisc">VER ANIMAIS CURTIDOS</a>
+                        <a href="#" class="btn_pubc">VER PUBLICAÇÕES CURTIDAS</a>
                     </div>
                         
                 </div>
@@ -77,12 +113,14 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>EDITAR PERFIL DE USUÁRIO</h2>
+            <hr>
             <form id="edit-profile-form">
                 <div class="form-group">
                     <label for="profile-picture">Foto de Perfil:</label>
                     <input type="file" id="profile-picture" accept="image/*">
                     <button type="button" id="remove-photo">Excluir Foto</button>
                 </div>
+                <hr>
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" required>
@@ -95,8 +133,9 @@
                     <label for="location">Localização:</label>
                     <input type="text" id="location" required>
                 </div>
+                <hr>
                 <div class="btn-save">
-                    <button type="submit">SALVAR ALTERAÇÕES</button>
+                    <button type="submit" class="btn_user_up">SALVAR ALTERAÇÕES</button>
                 </div>
                 
             </form>
@@ -104,7 +143,6 @@
     </div>
 
 
-    <!-- O footer mexeu de novo, eu acho que o Rapha lembra como resolver :D -->
     <!-- FOOTER -->
     <footer>
         <div class="footer">

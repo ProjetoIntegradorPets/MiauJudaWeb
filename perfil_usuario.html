@@ -15,6 +15,7 @@
     <script defer src="assets/js/swiper.js"></script>
     <script defer src="assets/js/blog.js"></script>
     <script src="assets/js/logged.js" defer></script>
+    <script src="assets/js/perfil_usuario.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -78,20 +79,22 @@
                     <!-- CONTATO -->
                     <div class="contato">
                         <h3>FORMAS DE CONTATO</h3>
-                        <b>emaildousuario@gmail.com</b>
-                        <b>(00) 00000-0000</b>
+                        <div class="fcontatos">
+                            <b id="user-email">usuario@email.com</b>
+                            <b id="user-phone">(00) 00000-0000</b>
+                        </div>
                     </div>
                     <hr>
                     <!-- LOCALIZACAO -->
                     <div class="localizacao">
                         <h3>LOCALIZAÇÃO</h3>
-                        <b>Localização do usuário, bem aqui - Desse Jeito, 000</b>
+                        <b id="user-location">Localização do usuário, bem aqui - Desse Jeito, 000</b>
                     </div>
                     <hr>
                     <!-- PETS E PUBLICACOES CURTIDAS -->
                     <div class="curtidas">
-                        <a href="#">VER ANIMAIS CURTIDOS</a><br>
-                        <a href="#">VER PUBLICAÇÕES CURTIDAS</a>
+                        <a href="#" class="btn_animaisc">VER ANIMAIS CURTIDOS</a>
+                        <a href="#" class="btn_pubc">VER PUBLICAÇÕES CURTIDAS</a>
                     </div>
                         
                 </div>
@@ -100,11 +103,46 @@
 
             <!-- BTN EDITAR PERFIL -->
             <div class="btn">
-                <a href="#" class="btn_editar_perfil">EDITAR PERFIL</a>
+                <a href="#" class="btn_editar_perfil" id="edit-profile-btn">EDITAR PERFIL</a>
             </div>
         </div>
     </section>
-    
+
+    <!-- FORMULÁRIO PARA EDIÇÃO -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>EDITAR PERFIL DE USUÁRIO</h2>
+            <hr>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="profile-picture">Foto de Perfil:</label>
+                    <input type="file" id="profile-picture" accept="image/*">
+                    <button type="button" id="remove-photo">Excluir Foto</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Localização:</label>
+                    <input type="text" id="location" required>
+                </div>
+                <hr>
+                <div class="btn-save">
+                    <button type="submit" class="btn_user_up">SALVAR ALTERAÇÕES</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+
     <!-- FOOTER -->
     <footer>
         <div class="footer">

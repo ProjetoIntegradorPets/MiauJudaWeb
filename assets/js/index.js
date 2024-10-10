@@ -20,28 +20,20 @@ function closeOnClickOutside(event) {
   }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // let pets = JSON.parse(localStorage.getItem('pets')) || [
-    //     { id: 1, name: 'Luna', location: 'São Paulo, SP', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    //     { id: 2, name: 'Max', location: 'Rio de Janeiro, RJ', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 3, name: 'Bella', location: 'Belo Horizonte, MG', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 4, name: 'Oliver', location: 'Porto Alegre, RS', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    //     { id: 5, name: 'Charlie',  location: 'Curitiba, PR', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 6, name: 'Lucy', location: 'Salvador, BA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    //     { id: 7, name: 'Milo', location: 'Brasília, DF', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 8, name: 'Nala', location: 'Fortaleza, CE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    //     { id: 9, name: 'Rocky', location: 'Manaus, AM', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 10, name: 'Simba', location: 'Recife, PE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    //     { id: 11, name: 'Daisy', location: 'Goiânia, GO', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-    //     { id: 12, name: 'Loki', location: 'Belém, PA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    // ];
-    let pets = [];
-    // Faça a requisição AJAX
-    fetch('request.php')
-    .then(response => response.json())
-    .then(data => {
-        pets = data;
-        renderPets();
-    });
+    // JSON.parse(localStorage.getItem('pets')) || 
+    let pets = [{"nome":"Rex","raca":"Labrador","descricao":"Cachorro amigável","categoria":"Cachorro"},{"nome":"Max","raca":"Pastor Alemão","descricao":"Cachorro enérgico","categoria":"Cachorro"},{"nome":"Buddy","raca":"Golden Retriever","descricao":"Cachorro fiel","categoria":"Cachorro"},{"nome":"Rocky","raca":"Bulldog","descricao":"Cachorro protetor","categoria":"Cachorro"},{"nome":"Charlie","raca":"Beagle","descricao":"Cachorro brincalhão","categoria":"Cachorro"},{"nome":"Bucky","raca":"Ragdoll","descricao":"Cachorro esperto","categoria":"Cachorro"},{"nome":"Bella","raca":"Golden Retriever","descricao":"Cachorro alegre","categoria":"Cachorro"},{"nome":"Duke","raca":"Bulldog","descricao":"Cachorro fiel","categoria":"Cachorro"},{"nome":"Bentley","raca":"Beagle","descricao":"Cachorro brincalhão","categoria":"Cachorro"},{"nome":"Ranger","raca":"Labrador","descricao":"Cachorro protetor","categoria":"Cachorro"},{"nome":"Diesel","raca":"Pastor Alemão","descricao":"Cachorro enérgico","categoria":"Cachorro"},{"nome":"Toby","raca":"Golden Retriever","descricao":"Cachorro amigável","categoria":"Cachorro"},{"nome":"Luna","raca":"Siamês","descricao":"Gato brincalhão","categoria":"Gato"},{"nome":"Mia","raca":"Persa","descricao":"Gato tranquilo","categoria":"Gato"},{"nome":"Lola","raca":"Maine Coon","descricao":"Gato carinhoso","categoria":"Gato"},{"nome":"Nala","raca":"Bengal","descricao":"Gato curioso","categoria":"Gato"},{"nome":"Simba","raca":"Maine Coon","descricao":"Gato brincalhão","categoria":"Gato"},{"nome":"Zoe","raca":"Bengal","descricao":"Gato curioso","categoria":"Gato"},{"nome":"Shadow","raca":"Ragdoll","descricao":"Gato carinhoso","categoria":"Gato"},{"nome":"Chloe","raca":"Siamês","descricao":"Gato tranquilo","categoria":"Gato"},{"nome":"Gracie","raca":"Persa","descricao":"Gato esperto","categoria":"Gato"},{"nome":"Tiger","raca":"Maine Coon","descricao":"Gato medroso","categoria":"Gato"}];
+    
+    try {
+        // Faça a requisição AJAX
+        fetch('request.php')
+        .then(response => response.json())
+        .then(data => {
+            pets = data;
+            renderPets();
+        });
+    } catch (error) {
+        console.log(error);
+    }
 
     // ================ Page variables
     const petsPerPage = 8;

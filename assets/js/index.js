@@ -20,20 +20,28 @@ function closeOnClickOutside(event) {
   }
 
 document.addEventListener('DOMContentLoaded', () => {
-    let pets = JSON.parse(localStorage.getItem('pets')) || [
-        { id: 1, name: 'Luna', location: 'São Paulo, SP', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-        { id: 2, name: 'Max', location: 'Rio de Janeiro, RJ', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 3, name: 'Bella', location: 'Belo Horizonte, MG', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 4, name: 'Oliver', location: 'Porto Alegre, RS', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-        { id: 5, name: 'Charlie',  location: 'Curitiba, PR', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 6, name: 'Lucy', location: 'Salvador, BA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-        { id: 7, name: 'Milo', location: 'Brasília, DF', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 8, name: 'Nala', location: 'Fortaleza, CE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-        { id: 9, name: 'Rocky', location: 'Manaus, AM', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 10, name: 'Simba', location: 'Recife, PE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-        { id: 11, name: 'Daisy', location: 'Goiânia, GO', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
-        { id: 12, name: 'Loki', location: 'Belém, PA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
-    ];
+    // let pets = JSON.parse(localStorage.getItem('pets')) || [
+    //     { id: 1, name: 'Luna', location: 'São Paulo, SP', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    //     { id: 2, name: 'Max', location: 'Rio de Janeiro, RJ', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 3, name: 'Bella', location: 'Belo Horizonte, MG', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 4, name: 'Oliver', location: 'Porto Alegre, RS', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    //     { id: 5, name: 'Charlie',  location: 'Curitiba, PR', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 6, name: 'Lucy', location: 'Salvador, BA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    //     { id: 7, name: 'Milo', location: 'Brasília, DF', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 8, name: 'Nala', location: 'Fortaleza, CE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    //     { id: 9, name: 'Rocky', location: 'Manaus, AM', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 10, name: 'Simba', location: 'Recife, PE', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    //     { id: 11, name: 'Daisy', location: 'Goiânia, GO', image: 'https://v0.dev/placeholder.svg', type: 'dog' },
+    //     { id: 12, name: 'Loki', location: 'Belém, PA', image: 'https://v0.dev/placeholder.svg', type: 'cat' },
+    // ];
+    let pets = [];
+    // Faça a requisição AJAX
+    fetch('request.php')
+    .then(response => response.json())
+    .then(data => {
+        pets = data;
+        renderPets();
+    });
 
     // ================ Page variables
     const petsPerPage = 8;
@@ -56,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const petDetailsModal = document.getElementById('petDetailsModal');
     const petDetailsName = document.getElementById('petDetailsName');
     const petDetailsImage = document.getElementById('petDetailsImage');
-    const petDetailsLocation = document.getElementById('petDetailsLocation');
+    const petDetailsDesc = document.getElementById('petDetailsDesc');
     const petDetailsType = document.getElementById('petDetailsType');
     const deletePetButton = document.querySelector('.delete-button');
 
@@ -114,20 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const startIndex = (currentPage - 1) * petsPerPage;
         const endIndex = startIndex + petsPerPage;
         const filteredPets = pets.filter(pet => currentFilter === 'todos' || 
-                                                (currentFilter === 'caes' && pet.type === 'dog') || 
-                                                (currentFilter === 'gatos' && pet.type === 'cat'));
+                                                (currentFilter === 'caes' && pet.categoria === 'Cachorro') || 
+                                                (currentFilter === 'gatos' && pet.categoria === 'Gato'));
         const petsToShow = filteredPets.slice(startIndex, endIndex);
-
         // Create petsToShow list
         petsToShow.forEach(pet => {
             const petCard = document.createElement('div');
 
             petCard.className = 'pet-card';
             petCard.innerHTML = `
-                <img src="${pet.image}" alt="${pet.name}">
+                <img src="https://v0.dev/placeholder.svg" alt="${pet.nome}">
                 <div class="pet-info">
-                    <h3>${pet.name}</h3>
-                    <p>${pet.location}</p>
+                    <h3>${pet.nome}</h3>
+                    <p>${pet.descricao}</p>
                 </div>
             `;
 
@@ -180,11 +187,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showPetDetails(pet) {
         // display informations
-        petDetailsName.textContent = pet.name;
-        petDetailsImage.src = pet.image;
-        petDetailsImage.alt = pet.name;
-        petDetailsLocation.textContent = `Localização: ${pet.location}`;
-        petDetailsType.textContent = `Tipo: ${pet.type === 'dog' ? 'Cão' : 'Gato'}`;
+        petDetailsName.textContent = pet.nome;
+        // petDetailsImage.src = pet.image;
+        petDetailsImage.src = 'https://v0.dev/placeholder.svg';
+        petDetailsImage.alt = pet.nome;
+        petDetailsDesc.textContent = `Descricao: ${pet.descricao}`;
+        petDetailsType.textContent = `Tipo: ${pet.categoria === 'Cachorro' ? 'Cão' : 'Gato'}`;
         petDetailsModal.style.display = 'block';
 
         // Delete pet

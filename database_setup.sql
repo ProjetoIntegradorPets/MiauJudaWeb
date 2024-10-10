@@ -1,3 +1,5 @@
+USE miaujuda;
+
 -- Excluir as tabelas se existirem
 DROP TABLE IF EXISTS Avistamento;
 DROP TABLE IF EXISTS ANIMAL_ADOCAO;
@@ -63,6 +65,7 @@ ALTER TABLE Avistamento ADD CONSTRAINT FK_Avistamento_2
     FOREIGN KEY (fk_ENDERECO_id)
     REFERENCES ENDERECO (id)
     ON DELETE SET NULL;
+
 
  INSERT INTO TIPO (id, categoria) VALUES
     (1, 'Cachorro'),

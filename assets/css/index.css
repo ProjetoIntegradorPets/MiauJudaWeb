@@ -101,7 +101,7 @@ main {
 /* LISTA DE PETS */
 .pet-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     gap: 20px;
 }
 
@@ -352,6 +352,12 @@ hr{
 
 .delete-button:hover {
     background-color: #cc0000;
+}
+
+@media (min-width: 450px) {
+    .pet-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 768px) {

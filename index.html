@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>MiauJuda</title>
 
     <link rel="stylesheet" href="assets/css/utils.css">
@@ -103,8 +102,8 @@
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="petImage">URL da Imagem:</label>
-                            <input type="url" id="petImage" name="petImage" required>
+                            <label for="profile-picture">Foto de Perfil:</label>
+                            <input type="file" id="profile-picture" accept="image/*">
                         </div>
                         <button type="submit" class="submit-button">Cadastrar Pet</button>
                     </form>
@@ -128,18 +127,52 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="petDescription">Descrição:</label>
-                            <input type="text" id="petDescription" name="petDescription" required>
+                            <label for="petWeight">Peso:</label>
+                            <input type="number" id="petWeight" name="petWeight" placeholder="KG">
+                        </div>
+                        <div class="form-group">
+                            <label for="petWeight">Tamanho:</label>
+                            <input type="number" id="petHeight" name="petHeight" placeholder="CM">
                         </div>
                         <div class="form-group">
                             <label for="petLocation">Última Localização:</label>
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="petImage">URL da Imagem:</label>
-                            <input type="url" id="petImage" name="petImage" required>
+                            <label for="petDescription">Descrição:</label>
+                            <input type="text" id="petDescription" name="petDescription" required>
                         </div>
-                        <button type="submit" class="submit-button">Cadastrar Pet</button>
+
+                        <!-- Sexo -->
+                        <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
+                                <label class="radio-button__label" for="radio1" id="macho">
+                                <span class="radio-button__custom"></span>
+                                Macho
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
+                                <label class="radio-button__label" for="radio2" id="femea">
+                                <span class="radio-button__custom"></span>
+                                Fêmea
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Sexo -->
+                        <div class="form-group2">
+                            <div class="label-url">
+                                <label for="petImage">URL da Imagem:</label>
+                            </div>
+                            <input type="file" id="profile-picture" accept="image/*" style="display: none;" onchange="updateFileName()">
+                            <input type="button" class="petimage" value="Selecionar Imagem" onclick="document.getElementById('profile-picture').click();">
+                            <span id="file-name"></span>
+                        </div>
+                        <div class="btnsub">
+                            <button type="submit" class="submit-button">Cadastrar Pet</button>
+                        </div>
+                        
                     </form>
                 </div>
             </section>

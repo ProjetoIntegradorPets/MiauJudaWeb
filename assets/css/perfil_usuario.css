@@ -183,12 +183,33 @@ hr{
     margin-bottom: 5px;
 }
 
-
 .form-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    border-color: darkorange;
+}
+
+.input_img_usuario {
+    padding: 0.3em 0.8em;
+    border-radius: 45px;
+}
+
+.btn_excluir_ft {
+    padding: 0.3em 0.8em;
+    border-radius: 45px;
+    color: #fff;
+    background-color: red;
+    border: none;
+}
+
+.input {
+    border-radius: 45px;
+    border: 2px solid var(--cor2);
+}
+
+.input:hover, .input:active {
+    background-color: #fbf4e2;
+    border: 2px solid var(--cor2);
 }
 
 .btn-save{

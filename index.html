@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -102,8 +101,8 @@
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="petImage">URL da Imagem:</label>
-                            <input type="url" id="petImage" name="petImage" required>
+                            <label for="profile-picture">Foto de Perfil:</label>
+                            <input type="file" id="profile-picture" accept="image/*">
                         </div>
                         <button type="submit" class="submit-button">Cadastrar Pet</button>
                     </form>
@@ -115,6 +114,17 @@
                     <span class="close-button">&times;</span>
                     <h2>Cadastrar Pet Adoção</h2>
                     <form id="addPetForm">
+
+                        <div class="form-group2">
+                            
+                            <label for="petImage">URL da Imagem:</label>
+                            <div class="file-btn">
+                            <input type="file" id="profile-picture" accept="image/*" style="display: none;" onchange="updateFileName()">
+                            <input type="button" class="petimage" value="Selecionar Imagem" onclick="document.getElementById('profile-picture').click();">
+                            <span id="file-name"></span>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="petName">Nome do Pet:</label>
                             <input type="text" id="petName" name="petName" required>
@@ -135,10 +145,32 @@
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="petImage">URL da Imagem:</label>
-                            <input type="url" id="petImage" name="petImage" required>
+                            <label for="petWeight">Peso:</label>
+                            <input type="number" id="petWeight" name="petWeight" required>
+                            <!-- Sexo -->
+                            <div class="radio-button-container">
+                                <div class="radio-button">
+                                    <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
+                                    <label class="radio-button__label" for="radio1" id="macho">
+                                    <span class="radio-button__custom"></span>
+                                    Macho
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
+                                    <label class="radio-button__label" for="radio2" id="femea">
+                                    <span class="radio-button__custom"></span>
+                                    Fêmea
+                                    </label>
+                                </div>
+                            </div>
+
                         </div>
-                        <button type="submit" class="submit-button">Cadastrar Pet</button>
+
+                        <div class="btnsub">
+                            <button type="submit" class="submit-button">Cadastrar Pet</button>
+                        </div>
+                        
                     </form>
                 </div>
             </section>

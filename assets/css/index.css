@@ -31,9 +31,10 @@
     }
     
     .help-section h2 {
-    color: #FF6B00;
+    color: #e47208;
     font-size: 18px;
     margin-bottom: 10px;
+    
     }
     
     .help-section p {
@@ -42,7 +43,7 @@
     }
     
     .help-button {
-    background-color: #FF6B00;
+    background-color: #ff7d03;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -72,9 +73,10 @@
     }
     
     .section-pets h2 {
-    color: #333;
+    color: #ff6b00;
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     }
     /* TABS DA SECTION */
     .tabs {

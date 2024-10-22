@@ -189,10 +189,12 @@ hr{
     box-sizing: border-box;
 }
 
+
 .input_img_usuario {
     padding: 0.3em 0.8em;
     border-radius: 45px;
 }
+
 
 .btn_excluir_ft {
     padding: 0.3em 0.8em;

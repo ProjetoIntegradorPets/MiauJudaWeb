@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <script src="assets/js/logged.js" defer></script>
     <script src="assets/js/index.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <!-- HEADER -->
@@ -82,10 +84,27 @@
                     <span class="close-button">&times;</span>
                     <h2>Cadastrar Pet Perdido</h2>
                     <form id="addPetForm">
+
+                        <!-- Arquivo de imagem -->
+                        <div class="form-group2">
+
+                            <label for="petImage">URL da Imagem:</label>
+                            <div class="file-btn">
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="petimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
+                            </div>
+                        </div>
+
+                        <!-- Nome do pet -->
                         <div class="form-group">
                             <label for="petName">Nome do Pet:</label>
                             <input type="text" id="petName" name="petName" required>
                         </div>
+
+                        <!-- Tipo do animal -->
                         <div class="form-group">
                             <label for="petType">Tipo:</label>
                             <select id="petType" name="petType" required>
@@ -93,19 +112,42 @@
                                 <option value="cat">Gato</option>
                             </select>
                         </div>
+
+                        <!-- Descrição do animal -->
                         <div class="form-group">
                             <label for="petDescription">Descrição:</label>
                             <input type="text" id="petDescription" name="petDescription" required>
                         </div>
+
+                         <!-- Sexo -->
+                         <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
+                                <label class="radio-button__label" for="radio1" id="macho">
+                                <span class="radio-button__custom"></span>
+                                Macho
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
+                                <label class="radio-button__label" for="radio2" id="femea">
+                                <span class="radio-button__custom"></span>
+                                Fêmea
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Última localização -->
                         <div class="form-group">
                             <label for="petLocation">Última Localização:</label>
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
-                        <div class="form-group">
-                            <label for="profile-picture">Foto de Perfil:</label>
-                            <input type="file" id="profile-picture" accept="image/*">
+
+                        <!-- Botão de cadastrar animal -->
+                        <div class="btnsub">
+                            <button type="submit" class="submit-button">Cadastrar Pet</button>
                         </div>
-                        <button type="submit" class="submit-button">Cadastrar Pet</button>
+
                     </form>
                 </div>
             </section>
@@ -120,9 +162,11 @@
 
                             <label for="petImage">URL da Imagem:</label>
                             <div class="file-btn">
-                            <input type="file" id="profile-picture" accept="image/*" style="display: none;" onchange="updateFileName()">
-                            <input type="button" class="petimage" value="Selecionar Imagem" onclick="document.getElementById('profile-picture').click();">
-                            <span id="file-name"></span>
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="petimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
                             </div>
                         </div>
 
@@ -148,54 +192,57 @@
                         <div class="form-group">
                             <label for="petWeight">Peso:</label>
                             <input type="number" id="petWeight" name="petWeight" required>
-                            <!-- Sexo -->
-                            <div class="radio-button-container">
-                                <div class="radio-button">
-                                    <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
-                                    <label class="radio-button__label" for="radio1" id="macho">
-                                    <span class="radio-button__custom"></span>
-                                    Macho
-                                    </label>
-                                </div>
-                                <div class="radio-button">
-                                    <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
-                                    <label class="radio-button__label" for="radio2" id="femea">
-                                    <span class="radio-button__custom"></span>
-                                    Fêmea
-                                    </label>
-                                </div>
-                            </div>
-
                         </div>
+                         <!-- Sexo -->
+                         <div class="radio-button-container2">
+                            <div class="radio-button2">
+                                <input type="radio" class="radio-button__input2" id="radio3" name="radio-group">
+                                <label class="radio-button__label2" for="radio3" id="macho2">
+                                <span class="radio-button__custom2"></span>
+                                Macho
+                                </label>
+                            </div>
+                            <div class="radio-button2">
+                                <input type="radio" class="radio-button__input2" id="radio4" name="radio-group">
+                                <label class="radio-button__label2" for="radio4" id="femea2">
+                                <span class="radio-button__custom2"></span>
+                                Fêmea
+                                </label>
+                            </div>
+                        </div>
+
+                
 
                         <div class="btnsub">
                             <button type="submit" class="submit-button">Cadastrar Pet</button>
                         </div>
 
-                    </form>
                 </div>
+                </form>
             </section>
 
-            <div class="addButton">
-                <button class="addButton-btn" onclick="toggleAddButton()" id="addButton-btn">+</button>
-                <div id="addButton-content" class="addButton-content">
-                    <b>cadastrar</b>
-                    <b>animal</b>
-                    <br><hr>
-                    <p id="cadAdocao" class="add_btns">ADOÇÃO</p>
-                    <p id="cadPerdido" class="add_btns">PERDIDO</p>
-                </div>
-            </div>
-        </main>
+    <div class="addButton">
+        <button class="addButton-btn" onclick="toggleAddButton()" id="addButton-btn">+</button>
+        <div id="addButton-content" class="addButton-content">
+            <b>cadastrar</b>
+            <b>animal</b>
+            <br>
+            <hr>
+            <p id="cadAdocao" class="add_btns">ADOÇÃO</p>
+            <p id="cadPerdido" class="add_btns">PERDIDO</p>
+        </div>
+    </div>
+    </main>
 
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="footer">
-                <!-- DIREITO AUTORAL -->
-                <h3>&copy; Todos Direitos Reservados</h3>
-            </div>
-        </footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <!-- DIREITO AUTORAL -->
+            <h3>&copy; Todos Direitos Reservados</h3>
+        </div>
+    </footer>
     </div>
 </body>
+
 </html>

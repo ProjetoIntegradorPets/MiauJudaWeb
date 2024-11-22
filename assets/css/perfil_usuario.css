@@ -14,7 +14,7 @@
 }
 .background {
     background-color: #fff;
-    border-radius: 3vh;
+    border-radius: 1.5em;
     box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.35);
     padding: 3vh;
     display: inline-block;

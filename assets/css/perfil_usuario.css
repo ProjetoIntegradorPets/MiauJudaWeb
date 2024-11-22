@@ -14,8 +14,8 @@
 }
 .background {
     background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 3vh;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.35);
     padding: 3vh;
     display: inline-block;
     flex-direction: row;
@@ -29,8 +29,8 @@ section h1{
 hr{
     margin-top: 1.2vh;
     border-radius: 50%;
-    border: #f2f2f2 solid .5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: #f2f2f2 solid 0.05vh;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.2);
     margin-bottom: 0.5em;
 }
 
@@ -72,7 +72,7 @@ hr{
 }
 
 .contato b, .localizacao b {
-    font-size: 15px;
+    font-size: 1.5vh;
     font-weight: 500;
 }
 
@@ -87,12 +87,12 @@ hr{
 .btn_animaisc, .btn_pubc, .btn_user_up {
     padding: 0.5em 0.8em;
     margin-left: 0.7em;
-    font-size: 14px;
+    font-size: 1.4vh;
     font-weight: 600;
     color: white;
     background: var(--cor1);
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4.5vh;
+    box-shadow: 0vh 0.8vh 1.5vh rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -108,24 +108,24 @@ hr{
 
 .btn_editar_perfil {
     padding: 1.2em 2.2em;
-    font-size: 14px;
+    font-size: 1.4vh;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.08vh;
     font-weight: 600;
     color: white;
     background: var(--cor2);
     border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4.5vh;
+    box-shadow: 0vh 0.8vh 1.5vh rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
 } 
 .btn_editar_perfil:hover {
     background: var(--cor1);
-    box-shadow: 0px 10px 10px var(--cor2);
+    box-shadow: 0vh 1vh 1vh var(--cor2);
     color: #fff;
-    transform: translateY(-5px);
+    transform: translateY(-0.5vh);
 } 
 
 .btn_animaisc:hover, .btn_pubc:hover, .btn_user_up:hover {
@@ -134,7 +134,7 @@ hr{
 }
 
 .btn_editar_perfil:active, .btn_animaisc:active, .btn_pubc:active {
-    transform: translateY(-1px);
+    transform: translateY(-0.1vh);
 }
 
 /* Formulário para edição */
@@ -153,17 +153,17 @@ hr{
 .modal-content {
     background-color: #fefefe;
     margin: 8% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 2vh;
+    border: 0.1vh solid #888;
     width: 80%;
-    max-width: 500px;
-    border-radius: 20px;
+    max-width: 50vh;
+    border-radius: 2vh;
 }
 
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 2.8vh;
     font-weight: bold;
 }
 
@@ -180,38 +180,38 @@ hr{
 
 .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5vh;
 }
 
 .form-group input {
     width: 100%;
-    padding: 8px;
+    padding: 0.8vh;
     box-sizing: border-box;
 }
 
 
 .input_img_usuario {
     padding: 0.3em 0.8em;
-    border-radius: 45px;
+    border-radius: 0.45vh;
 }
 
 
 .btn_excluir_ft {
     padding: 0.3em 0.8em;
-    border-radius: 45px;
+    border-radius: 4.5vh;
     color: #fff;
     background-color: red;
     border: none;
 }
 
 .input {
-    border-radius: 45px;
-    border: 2px solid var(--cor2);
+    border-radius: 4.5vh;
+    border: 0.2vh solid var(--cor2);
 }
 
 .input:hover, .input:active {
     background-color: #fbf4e2;
-    border: 2px solid var(--cor2);
+    border: 0.2vh solid var(--cor2);
 }
 
 .btn-save{
@@ -220,7 +220,7 @@ hr{
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 900px) {
+@media (max-width: 90vh) {
     .container{
         padding-top: 5vh;
     }
@@ -232,17 +232,17 @@ hr{
     flex-direction: column;
    }
 }
-@media (max-width: 770px) {
+@media (max-width: 77vh) {
     .btn{
         padding-top: 5vh;
     }
 }
-@media (max-width: 530px) {
+@media (max-width: 53vh) {
     .btn, .carac{
         padding-top: 10vh;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 40vh) {
     .btn{
         padding-top: 14vh;
     }

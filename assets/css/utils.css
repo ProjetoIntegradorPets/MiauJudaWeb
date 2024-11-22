@@ -37,12 +37,12 @@ body {
 
 /* SCROLL BAR CUSTOM */
 body::-webkit-scrollbar-thumb {
-    border-radius: 20px;
+    border-radius: 2vh;
     background: var(--cor2);
 }
 body::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
+    width: 1.3vh;
+    height: 1.3vh;
 }
 
 /* NAVBAR*/
@@ -53,11 +53,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
-    border-radius: 0 0 10px 10px;
+    padding: 0 4vh;
+    border-radius: 0 0 1vh 1vh;
     margin: 0 auto;
     border-color: #FFF;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.1);
 }
 
 /* LOGO */
@@ -77,11 +77,11 @@ nav ul {
 nav ul li a, nav ul li .cad_button {
     color: var(--hfLetter);
     display: block;
-    margin: 0 2px;
+    margin: 0 0.2vh;
     font-weight: 600;
-    padding: 8px 18px;
+    padding: 0.8vh 1.8vh;
     transition: 0.2s;
-    border-radius: 30px;
+    border-radius: 3vh;
 }
 nav ul li a:hover, nav ul li .cad_button:hover {
     background: #f8f4e9;
@@ -97,37 +97,37 @@ nav ul li {
     display: none;
     height: fit-content;
     cursor: pointer;
-    padding: 3px 8px;
-    border-radius: 5px;
+    padding: 0.3vh 0.8vh;
+    border-radius: 0.5vh;
     transition: 0.2s;
 }
 .mn:hover {
     background: #f6f4ff;
 }
 .mn div {
-    width: 30px;
-    height: 2px;
-    margin: 6px 0;
+    width: 3vh;
+    height: 0.2vh;
+    margin: 0.6vh 0;
     background: #838999;
 }
 
 /* RESPONSIVIDADE NAVBAR */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 90vh) {
     header {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 2vh;
     }
 
     nav {
         position: absolute;
-        left: -300px;
+        left: -30vh;
         top: 0;
         z-index: 999;
-        width: 280px;
+        width: 28vh;
         height: 100vh;
         background-color: #fefefe;
         transition: 0.2s;
-        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0.2vh 0 2vh 0 rgba(0, 0, 0, 0.05);
     }
 
     #nav_check:checked~nav {
@@ -136,22 +136,22 @@ nav ul li {
 
     nav .logo {
         display: block;
-        height: 70px;
+        height: 7vh;
         display: flex;
         align-items: center;
-        margin-left: 30px;
+        margin-left: 3vh;
     }
 
     nav ul li a {
-        margin-bottom: 5px;
-        padding: 10px 15px;
-        border-radius: 5px;
+        margin-bottom: 0.5vh;
+        padding: 1vh 1.5vh;
+        border-radius: 0.5vh;
     }
 
     nav ul {
         display: block;
-        padding: 0 20px;
-        margin-top: 30px;
+        padding: 0 2vh;
+        margin-top: 3vh;
     }
     .mn{
         display: block;
@@ -162,11 +162,11 @@ nav ul li {
 .footer {
     color: var(--hfLetter);
     width: 80%;
-    padding: 10px;
+    padding: 1vh;
     height: 10vh;
     text-align: center;
     background-color: var(--hf);
-    border-radius: 10px 10px 0 0;
+    border-radius: 1vh 1vh 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,22 +179,22 @@ footer{
 
 
 /* RESPONSIVIDADE DA LOGO */
-@media (max-width: 300px) {
+@media (max-width: 30vh) {
     .logo {
         transform: scale(0.25); 
     }
 }
-@media (min-width: 300px) and (max-width: 600px) {
+@media (min-width: 30vh) and (max-width: 60vh) {
     .logo {
         transform: scale(0.4); 
     }
 }
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 60vh) and (max-width: 90vh) {
     .logo {
         transform: scale(0.50); 
     }
 }
-@media (min-width: 900px) {
+@media (min-width: 90vh) {
     .logo {
         transform: scale(0.6); 
     }

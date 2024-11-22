@@ -1,6 +1,6 @@
 /* GERAL */
 .container {
-    max-width: 1200px;
+    max-width: 120vh;
     margin: 0 auto;
     min-height: 100vh;
     display: flex;
@@ -9,7 +9,7 @@
     
     main {
     flex-grow: 1;
-    padding: 20px;
+    padding: 2vh;
     }
     
     .fa{
@@ -21,12 +21,12 @@
         background-color: white;
         border-radius: 1em;
         margin-bottom: 3vh;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        box-shadow: 0vh 0.2vh 0.4vh rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
     }
     
     .help-section:hover {
-        transform: translateY(-5px);
+        transform: translateY(-0.5vh);
     }
     
     .help-section h2 {
@@ -45,7 +45,7 @@
     background-color: #ff7d03;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 1vh 2vh;
     border-radius: 2em;
     font-weight: bold;
     cursor: pointer;
@@ -65,16 +65,16 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 1vh;
+    padding: 2vh;
+    box-shadow: 0 0.2vh 0.4vh rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     }
     
     .section-pets h2 {
     color: var(--cor3);
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
     text-transform: uppercase;
 
     }
@@ -82,15 +82,15 @@
     .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;
     }
     
     .tab-button {
     background-color: #F0F0F0;
     border: none;
-    padding: 5px 15px;
-    margin-right: 10px;
-    border-radius: 15px;
+    padding: 0.5vh 1.5vh;
+    margin-right: 1vh;
+    border-radius: 1.5vh;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -104,37 +104,37 @@
     .pet-list {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-    gap: 20px;
+    gap: 2vh;
     }
     
     .pet-card {
     display: flex;
     flex-direction: column;
     background-color: #F0F0F0;
-    border-radius: 10px;
+    border-radius: 1vh;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     }
     
     .pet-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-0.5vh);
+    box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.1);
     }
     
     .pet-card img {
     width: 100%;
-    height: 200px;
+    height: 20vh;
     object-fit: cover;
     }
     
     .pet-info {
-    padding: 15px;
+    padding: 1.5vh;
     }
     
     .pet-info h3 {
     color: #FF6B00;
-    margin-bottom: 5px;
+    margin-bottom: 0.5vh;
     }
     
     .pet-info p {
@@ -146,16 +146,16 @@
     .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 2vh;
     }
     
     .page-button {
-    width: 30px;
-    height: 30px;
+    width: 3vh;
+    height: 3vh;
     border-radius: 50%;
     border: none;
     background-color: #F0F0F0;
-    margin: 0 5px;
+    margin: 0 0.5vh;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -169,7 +169,7 @@
     color: #FF6B00;
     }
     hr{
-    margin-top: 10px;
+    margin-top: 1vh;
     }
 
      /* SECTION - MACHO OU FEMEA */
@@ -177,7 +177,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 2.4vh;
     margin-top: 5vh;
 }  
 .radio-button, .radio-button2 {
@@ -194,10 +194,10 @@
 }  
 .radio-button__label, .radio-button__label2 {
     display: inline-block;
-    padding-left: 30px;
-    margin-bottom: 10px;
+    padding-left: 3vh;
+    margin-bottom: 1vh;
     position: relative;
-    font-size: 15px;
+    font-size: 1.5vh;
     color: #838999;
     font-weight: 600;
     cursor: pointer;
@@ -208,30 +208,30 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 2vh;
+    height: 2vh;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 0.2vh solid #ccc;
     transition: all 0.3s ease;
 }  
 
 .file-btn {
     display: flex;
     justify-content: center;
-    padding: 4px;
+    padding: 0.4vh;
 }
 /* SE RADIO_BUTTON FOR CHECKED, O ESTILO DO BOTAO MUDA */
 .radio-button__input:checked + #macho .radio-button__custom, .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
     background-color: #4c8bf5;
     border-color: transparent;
     transform: scale(0.8);
-    box-shadow: 0 0 20px #4c8bf580;
+    box-shadow: 0 0 2vh #4c8bf580;
 }
 .radio-button__input:checked + #femea .radio-button__custom, .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
     background-color: #f54cd6;
     border-color: transparent;
     transform: scale(0.8);
-    box-shadow: 0 0 20px #f54cd380;
+    box-shadow: 0 0 2vh #f54cd380;
 }
 .radio-button__input:checked + #macho, .radio-button__input2:checked + #macho2 {
     color: #4c8bf5;
@@ -242,12 +242,12 @@
 #macho:hover .radio-button__custom, #macho2:hover .radio-button__custom2{
     transform: scale(1.2);
     border-color: #4c8bf5;
-    box-shadow: 0 0 20px #4c8bf580;
+    box-shadow: 0 0 2vh #4c8bf580;
 }
 #femea:hover .radio-button__custom, #femea2:hover .radio-button__custom2{
     transform: scale(1.2);
     border-color: #f54cd6;
-    box-shadow: 0 0 20px #f54cd380;
+    box-shadow: 0 0 2vh #f54cd380;
 }
     
     /* CADASTRAR_BOTAO */
@@ -255,25 +255,25 @@
     position: relative;
     display: inline-block;
     position: fixed;
-    bottom: 80px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
+    bottom: 8vh;
+    right: 4vh;
+    width: 5vh;
+    height: 5vh;
     }
     
     .addButton-btn {
     border: none;
-    width: 68px;
-    height: 68px;
+    width: 6.8vh;
+    height: 6.8vh;
     background-color: #FF6B00;
     color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 2.4vh;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0.2vh 0.4vh rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
     }
     
@@ -284,29 +284,29 @@
     
     .addButton-content {
     visibility: hidden;
-    width: 145px;
+    width: 14.5vh;
     background-color: white;
     color: rgb(70, 63, 52);
     text-align: center;
-    border-radius: 6px;
-    padding: 10px 0;
+    border-radius: 0.6vh;
+    padding: 1vh 0;
     position: absolute;
     font-weight: 900;
     font-size: large;
     top: 50%;
-    left: -150px; /* Alinha à esquerda do botão */
+    left: -15vh; /* Alinha à esquerda do botão */
     transform: translateY(-50%);
     z-index: 1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0vh 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.3s ease;
     }
     
     .addButton-content p {
     margin: 0;
-    padding: 10px 0;
+    padding: 1vh 0;
     cursor: pointer;
-    margin: 3px;
+    margin: 0.3vh;
     background-color: #F0F0F0;
     border-radius: 5%;
     }
@@ -337,23 +337,23 @@
         background-color: #FFF5E6;
         background-color: #FFF;
     margin: 3% auto;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 2vh;
+    border-radius: 1vh;
     width: 90%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 50vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.2);
     animation: modalFadeIn 0.3s;
     }
     
     @keyframes modalFadeIn {
-    from {opacity: 0; transform: translateY(-50px);}
+    from {opacity: 0; transform: translateY(-5vh);}
     to {opacity: 1; transform: translateY(0);}
     }
     
     .close-button {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 2.8vh;
     font-weight: bold;
     cursor: pointer;
     }
@@ -367,29 +367,29 @@
     
     .modal h2 {
     color: #FF6B00;
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;
     }
     
     .modal p, .modal li {
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
     }
     
     .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;
     }
     
     .form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.5vh;
         color: #333;
     }
     
     .form-group input,
     .form-group select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-        border-radius: 20px;
+    padding: 0.8vh;
+    border: 0.1vh solid #ccc;
+        border-radius: 2vh;
     }
     
     
@@ -408,14 +408,14 @@
     
     .form-group2 label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 0.5vh;
     }
     
     
     .form-group2 input {
         width: 40%;
-        padding: 10px;
-    border-radius: 4px;
+        padding: 1vh;
+    border-radius: 4vh;
         border: none;
         box-sizing: border-box;
         background-color: #ccc;
@@ -429,7 +429,7 @@
     }
 
     .label-url{
-        padding: 10px;
+        padding: 1vh;
     }
     
     /* escolher arquivo fim  */
@@ -438,9 +438,9 @@
     background-color: #FF6B00;
     color: white;
     border: none;
-    padding: 10px 20px;
-        border-radius: 4px;
-        border-radius: 20px;
+    padding: 1vh 2vh;
+        border-radius: 0.4vh;
+        border-radius: 2vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
     }
@@ -451,21 +451,21 @@
     
     .pet-details-image {
     width: 100%;
-    max-height: 300px;
+    max-height: 30vh;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 1vh;
+    margin-bottom: 1.5vh;
     }
     
     .delete-button, .adotar-button {
     background-color: #ff4d4d;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 1vh 2vh;
+    border-radius: 0.4vh;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 15px;
+    margin-top: 1.5vh;
     }
     .adotar-button {
     background-color: #FF6B00;
@@ -478,15 +478,15 @@
     background-color: #cc0000;
     }
     
-    @media (min-width: 450px) {
+    @media (min-width: 45vh) {
     .pet-list {
     grid-template-columns: repeat(2, 1fr);
     }
     }
     
-    @media (min-width: 768px) {
+    @media (min-width: 76.8vh) {
     .container {
-    padding: 0 20px;
+    padding: 0 2vh;
     }
     
     .help-section, .lost-pets {
@@ -494,7 +494,7 @@
     }
     
     .tab-button {
-    padding: 8px 20px;
+    padding: 0.8vh 2vh;
     }
     
     .pet-list {
@@ -502,21 +502,21 @@
     }
     }
     
-    @media (min-width: 1024px) {
+    @media (min-width: 102.4vh) {
     .container {
-    padding: 0 40px;
+    padding: 0 4vh;
     }
     
     .help-section, .lost-pets {
-    padding: 40px;
+    padding: 4vh;
     }
     
     .help-section h2 {
-    font-size: 28px;
+    font-size: 2.8vh;
     }
     
     .lost-pets h2 {
-    font-size: 24px;
+    font-size: 2.4vh;
     }
     
     .pet-list {

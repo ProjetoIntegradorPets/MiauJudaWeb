@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="assets/css/utils.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/forms.css">
 
     <script src="assets/js/logged.js" defer></script>
     <script src="assets/js/index.js" defer></script>
@@ -61,13 +60,13 @@
                     <button class="tab-button" data-tab="gatos">GATOS</button>
                 </div>
                 <div id="petList" class="pet-list">
-                    <!-- os cards de pet vao aparecer aqui  -->
+                    <!-- Pet cards will be dynamically inserted here -->
                 </div>
                 <div class="pagination">
-                    <!-- os botoes de paginacao vao ser inseridos aqui -->
+                    <!-- Pagination buttons will be dynamically inserted here -->
                 </div>
             </section>
-                
+
             <section id="petDetailsModal" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
@@ -142,6 +141,12 @@
                         <div class="form-group">
                             <label for="petLocation">Última Localização:</label>
                             <input type="text" id="petLocation" name="petLocation" required>
+                        </div>
+
+                           
+                        <div class="form-group">
+                            <label for="contact">Forma de contato:</label>
+                            <input type="text" id="contact" name="contact" required>
                         </div>
 
                         <!-- Botão de cadastrar animal -->
@@ -239,6 +244,7 @@
             <hr>
             <p id="cadAdocao" class="add_btns">PET PARA ADOÇÃO</p>
             <p id="cadPerdido" class="add_btns">PET PERDIDO</p>
+            <p id="" class="add_btns">PET ENCONTRADO</p>
         </div>
     </div>
     </main>

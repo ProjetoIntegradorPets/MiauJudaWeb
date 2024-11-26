@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="assets/img/patasfundo.png" type="image/x-icon">
 
-    <script src="assets/js/index.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -95,18 +94,118 @@
                     <button class="tab-button" data-tab="gatos">GATOS</button>
                 </div>
                 <div id="petList" class="pet-list">
-                    <!-- Pet cards will be dynamically inserted here -->
+                    <!-- OS CARDS DE PET VAO SENDO INSERIDOS BEM AQUI -->
                 </div>
                 <div class="pagination">
-                    <!-- Pagination buttons will be dynamically inserted here -->
+                    <!-- OS BOTOES DE PAGINAÇÃO APARECEM AQUI -->
                 </div>
             </section>
 
-            <section id="addPetModal" class="modal">
+            <section id="addPetModal_cadPerdido" class="modal">
                 <div class="modal-content">
                     <span class="close-button">&times;</span>
-                    <h2>Cadastrar um Pet Perdido</h2>
+                    <h3>CADASTRAR PET PERDIDO</h3>
+                    <hr>
                     <form id="addPetForm">
+
+                        <!-- Arquivo de imagem -->
+                        <div class="form-group2">
+
+                            <label for="petImage">Foto do Pet:</label>
+                            <div class="file-btn">
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="petimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
+                                <div class="btn_excluirft">
+                                    <button type="button" id="remove-photo" class="btn_excluir_ft">Excluir Foto</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Nome do pet -->
+                        <div class="form-group">
+                            <label for="petName">Nome do Pet:</label>
+                            <input type="text" id="petName" name="petName" required>
+                        </div>
+
+                        <!-- Tipo do animal -->
+                        <div class="form-group">
+                            <label for="petType">Tipo:</label>
+                            <select id="petType" name="petType" required>
+                                <option value="dog">Cão</option>
+                                <option value="cat">Gato</option>
+                            </select>
+                        </div>
+
+                        <!-- Descrição do animal -->
+                        <div class="form-group">
+                            <label for="petDescription">Descrição:</label>
+                            <input type="text" id="petDescription" name="petDescription" required>
+                        </div>
+                        <hr>
+                         <!-- Sexo -->
+                         <div class="radio-button-container">
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio1" name="radio-group">
+                                <label class="radio-button__label" for="radio1" id="macho">
+                                <span class="radio-button__custom"></span>
+                                Macho
+                                </label>
+                            </div>
+                            <div class="radio-button">
+                                <input type="radio" class="radio-button__input" id="radio2" name="radio-group">
+                                <label class="radio-button__label" for="radio2" id="femea">
+                                <span class="radio-button__custom"></span>
+                                Fêmea
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Última localização -->
+                        <div class="form-group">
+                            <label for="petLocation">Última Localização:</label>
+                            <input type="text" id="petLocation" name="petLocation" required>
+                        </div>
+
+                        <!-- Forma de contato -->
+                        <div class="form-group">
+                            <label for="petLocation">Forma de Contato:</label>
+                            <input type="text" id="userContact" name="userContact" required>
+                        </div>
+                        <hr>
+                        <!-- Botão de cadastrar animal -->
+                        <div class="btnsub">
+                            <button type="submit" class="submit-button">CADASTRAR PET</button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <section id="addPetModal_cadAdocao" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>CADASTRAR PET PARA ADOÇÃO</h3>
+                    <hr>
+                    <form id="addPetForm">
+
+                        <div class="form-group2">
+
+                            <label for="petImage">Foto do Pet:</label>
+                            <div class="file-btn">
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="petimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
+                                <div class="btn_excluirft">
+                                    <button type="button" id="remove-photo" class="btn_excluir_ft">Excluir Foto</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
                         <div class="form-group">
                             <label for="petName">Nome do Pet:</label>
                             <input type="text" id="petName" name="petName" required>
@@ -123,31 +222,61 @@
                             <input type="text" id="petLocation" name="petLocation" required>
                         </div>
                         <div class="form-group">
-                            <label for="petImage">URL da Imagem:</label>
-                            <input type="url" id="petImage" name="petImage" required>
+                            <label for="petBreed">Raça:</label>
+                            <input type="text" id="petBreed" name="petBreed" required>
                         </div>
-                        <button type="submit" class="submit-button">Cadastrar Pet</button>
-                    </form>
+                        <div class="form-group">
+                            <label for="petWeight">Peso:</label>
+                            <input type="number" id="petWeight" name="petWeight" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petHeight">Tamanho:</label>
+                            <input type="number" id="petHeight" name="petHeight" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="petDescription">Descrição:</label>
+                            <input type="text" id="petDescription" name="petDescription" required>
+                        </div>
+                         <!-- Sexo -->
+                         <div class="radio-button-container2">
+                            <div class="radio-button2">
+                                <input type="radio" class="radio-button__input2" id="radio3" name="radio-group">
+                                <label class="radio-button__label2" for="radio3" id="macho2">
+                                <span class="radio-button__custom2"></span>
+                                Macho
+                                </label>
+                            </div>
+                            <div class="radio-button2">
+                                <input type="radio" class="radio-button__input2" id="radio4" name="radio-group">
+                                <label class="radio-button__label2" for="radio4" id="femea2">
+                                <span class="radio-button__custom2"></span>
+                                Fêmea
+                                </label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="btnsub">
+                            <button type="submit" class="submit-button">CADASTRAR PET</button>
+                        </div>
+
                 </div>
+                </form>
             </section>
-
-
 
     <div class="addButton">
         <button class="addButton-btn" onclick="toggleAddButton()" id="addButton-btn">+</button>
         <div id="addButton-content" class="addButton-content">
-            <b>Cadastrar</b>
-            <b>Animal</b>
+            <b>CADASTRAR</b>
+            <b>ANIMAL</b>
             <br>
-            <hr>
             <p id="cadAdocao" class="add_btns">PET PARA ADOÇÃO</p>
             <p id="cadPerdido" class="add_btns">PET PERDIDO</p>
-            <p id="" class="add_btns">PET ENCONTRADO</p>
         </div>
     </div>
     </main>
-        
 
+    <script src="assets/js/index.js" defer></script>
+        
         <!-- FOOTER -->
         <footer>
             <div class="footer">

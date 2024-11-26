@@ -5,43 +5,43 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    }
+}
     
-    main {
+main {
     flex-grow: 1;
     padding: 2vh;
-    }
+}
     
-    .fa{
+.fa {
     color: #FF6B00;
-    }
+}
     
-    /* AJUDA */
-    .help-section {
-        background-color: white;
-        border-radius: 1em;
-        margin-bottom: 3vh;
-        box-shadow: 0vh 0.2vh 0.4vh rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
+ /* AJUDA */
+.help-section {
+    background-color: white;
+    border-radius: 1em;
+    margin-bottom: 3vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
     
-    .help-section:hover {
-        transform: translateY(-0.5vh);
-    }
+.help-section:hover {
+    transform: translateY(-0.5vh);
+}
     
-    .help-section h2 {
-        text-align: center;
-        color: var(--cor3);
-        margin-bottom: 1vh;  
-        font-size: 1em;
-    }
+.help-section h2 {
+    text-align: center;
+    color: var(--cor3);
+    margin-bottom: 1vh;  
+    font-size: 1em;
+}
     
-    .help-section p {
+.help-section p {
     color: #666;
     margin-bottom: 1vh;
-    }
+}
     
-    .help-button {
+.help-button {
     background-color: #ff7d03;
     color: white;
     border: none;
@@ -50,13 +50,13 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    }
+}
     
-    .help-button:hover {
+.help-button:hover {
     background-color: #E65100;
     }
     
-    /* SECTION */
+/* SECTION */
     .section-pets {
     width: 100%;
     min-height: 80vh;
@@ -69,23 +69,23 @@
     padding: 2vh 2vw;
     box-shadow: 0 0.2vh 0.4vw rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    }
+}
     
-    .section-pets h2 {
+.section-pets h2 {
     color: var(--cor3);
     margin-bottom: 1vh;
     margin-top: 1vh;
     text-transform: uppercase;
+}
 
-    }
-    /* TABS DA SECTION */
-    .tabs {
+/* TABS DA SECTION */
+.tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5vh;
-    }
+}
     
-    .tab-button {
+.tab-button {
     background-color: #F0F0F0;
     border: none;
     padding: 0.5vh 1.5vh;
@@ -93,21 +93,21 @@
     border-radius: 2em;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    }
+}
     
-    .tab-button.active {
+.tab-button.active {
     background-color: #FF6B00;
     color: white;
-    }
+}
     
-    /* LISTA DE PETS */
-    .pet-list {
+/* LISTA DE PETS */
+.pet-list {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     gap: 2vh;
-    }
+}
     
-    .pet-card {
+.pet-card {
     display: flex;
     flex-direction: column;
     background-color: #F0F0F0;
@@ -115,40 +115,40 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    }
+}
     
-    .pet-card:hover {
+.pet-card:hover {
     transform: translateY(-0.5vh);
     box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.1);
-    }
+}
     
-    .pet-card img {
+.pet-card img {
     width: 100%;
     height: 20vh;
     object-fit: cover;
-    }
+}
     
-    .pet-info {
+.pet-info {
     padding: 1.5vh;
-    }
+}
     
-    .pet-info h3 {
+.pet-info h3 {
     color: #FF6B00;
     margin-bottom: 0.5vh;
-    }
+}
     
-    .pet-info p {
+.pet-info p {
     color: #666;
-    }
+}
        
-    /* PAGINATION BUTTON */
-    .pagination {
+/* PAGINATION BUTTON */
+.pagination {
     display: flex;
     justify-content: center;
     margin-top: 2vh;
-    }
+}
     
-    .page-button {
+.page-button {
     width: 3vh;
     height: 3vh;
     border-radius: 50%;
@@ -157,40 +157,276 @@
     margin: 0 0.5vh;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    }
+ }
     
-    .page-button.active {
+.page-button.active {
     background-color: #FF6B00;
     color: white;
-    }
+}
     
-    b, hr{
-    color: #FF6B00;
-    }
-    hr{
-    margin-top: 1vh;
-    }
+b {
+    color: var(--cor3);
+}
 
-     /* SECTION - MACHO OU FEMEA */
+hr {
+    margin-top: 1vh;
+}
+      
+/* BOTAO DE CADASTRO DE PETS */
+.addButton {
+    position: relative;
+    display: inline-block;
+    position: fixed;
+    bottom: 10vh;
+    right: 14vh;
+    width: 5vh;
+    height: 5vh;
+}
+    
+.addButton-btn {
+    border: none;
+    width: 10vh;
+    height: 10vh;
+    background-color: var(--cor4);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+    cursor: pointer;
+    box-shadow: 0 0.2vh 0.4vh rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+    
+.addButton-btn:hover {
+    background-color: #cb4700;
+    transform: scale(1.1);
+}
+    
+.addButton-content {
+    visibility: hidden;
+    width: 16vw;
+    background-color: white;
+    color: rgb(70, 63, 52);
+    text-align: center;
+    border-radius: 1em;
+    padding: 1vh    ;
+    position: absolute;
+    font-weight: 900;
+    font-size: large;
+    top: 50%;
+    left: -16.5vw; /* Alinha à esquerda do botão */
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0vh 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.addButton-content p {
+    margin: 0;
+    padding: 0.8vh;
+    cursor: pointer;
+    margin: 0.5vh;
+    background-color: #F0F0F0;
+    border-radius: 5%;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+}
+    
+.addButton-content p:hover {
+    background-color: #dbdbdb;
+}
+    
+/* Quando ativo, mostra a addButton */
+.addButton-content.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* MODAIS COM OS FORMULARIOS DE CADASTRO DE PET */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+        
+.modal-content {
+    background-color: #FFF5E6;
+    background-color: #FFF;
+    margin: 3% auto;
+    padding: 2vh;
+    border-radius: 1vh;
+    width: 90%;
+    max-width: 60vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+.modal-content h3 {
+    margin-top: 1vh;
+    font-size: 1.3em;
+    color: var(--cor3);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.75em;
+}
+
+.modal-content hr {
+    margin-top: 1.2vh;
+    border-radius: 50%;
+    border: #f2f2f2 solid 0.05vh;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5em;
+}
+        
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-5vh);}
+    to {opacity: 1; transform: translateY(0);}
+}
+        
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+    
+.close-button:hover,
+.close-button:focus {
+    color: var(--cor2);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.file-btn {
+    margin: 2vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+        
+.modal p, .modal li {
+    margin-bottom: 1vh;
+}
+        
+.form-group {
+    margin-bottom: 1.5vh;
+}
+        
+.form-group label {
+    display: block;
+    margin-bottom: 0.5vh;
+    color: #333;
+}
+        
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8vh;
+    border: 0.1vh solid #ccc;
+    border-radius: 2vh;
+}
+            
+/* Escolher arquivo */
+.btnsub {
+    display: flex;
+    justify-content: center;
+}
+
+.btnsub button {
+    background-color: var(--cor4);
+    font-size: 1em;
+    padding: 0.8vh 1.5vw;
+    transition: all 0.3s ease 0s;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2em;
+}
+
+.btnsub button:hover {
+    background-color: var(--cor1);
+    transform: translateY(-0.5vh);
+}
+        
+.form-group2 {
+    margin-bottom: 1em;
+}
+        
+.form-group2 label {
+        display: block;
+        margin-bottom: 0.5vh;
+}
+        
+.form-group2 input {
+    width: 40%;
+    padding: 1vh;
+    border-radius: 4vh;
+    border: none;
+    box-sizing: border-box;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 0.5vw;       
+}
+    
+.form-group2 input:hover {
+    background-color: #666565a9;
+}
+
+.btn_excluirft {
+    display: flex;
+    justify-content: center;   
+}
+
+.btn_excluirft button {
+    background-color: #fff;
+    font-size: 0.8em;
+    padding: 0.5vh 0.6vw;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.btn_excluirft button:hover {
+    background-color: #ccc;
+}
+          
+/* escolher arquivo fim  */
+
+/* SECTION - MACHO OU FEMEA */
 .radio-button-container, .radio-button-container2 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2.4vh;
     margin-top: 5vh;
-}  
+}
+
 .radio-button, .radio-button2 {
     display: inline-block;
     position: relative;
     cursor: pointer;
-} 
+}
+
 .radio-button__input, .radio-button__input2 {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
     border-color: white;
-}  
+}
+
 .radio-button__label, .radio-button__label2 {
     display: inline-block;
     padding-left: 3vh;
@@ -202,7 +438,8 @@
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.3s ease;
-}  
+}
+
 .radio-button__custom, .radio-button__custom2 {
     position: absolute;
     top: 0;
@@ -219,244 +456,69 @@
     justify-content: center;
     padding: 0.4vh;
 }
+
 /* SE RADIO_BUTTON FOR CHECKED, O ESTILO DO BOTAO MUDA */
-.radio-button__input:checked + #macho .radio-button__custom, .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
+.radio-button__input:checked + #macho .radio-button__custom,
+ .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
     background-color: #4c8bf5;
     border-color: transparent;
     transform: scale(0.8);
     box-shadow: 0 0 2vh #4c8bf580;
 }
-.radio-button__input:checked + #femea .radio-button__custom, .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
+
+.radio-button__input:checked + #femea .radio-button__custom,
+ .radio-button__input2:checked + .radio-button__label2 .radio-button__custom2 {
     background-color: #f54cd6;
     border-color: transparent;
     transform: scale(0.8);
     box-shadow: 0 0 2vh #f54cd380;
 }
+
 .radio-button__input:checked + #macho, .radio-button__input2:checked + #macho2 {
     color: #4c8bf5;
 } 
+
 .radio-button__input:checked + #femea, .radio-button__input2:checked + #femea2 {
     color: #f54cd6;
 } 
+
 #macho:hover .radio-button__custom, #macho2:hover .radio-button__custom2{
     transform: scale(1.2);
     border-color: #4c8bf5;
     box-shadow: 0 0 2vh #4c8bf580;
 }
+
 #femea:hover .radio-button__custom, #femea2:hover .radio-button__custom2{
     transform: scale(1.2);
     border-color: #f54cd6;
     box-shadow: 0 0 2vh #f54cd380;
 }
-    
-    /* CADASTRAR_BOTAO */
-    .addButton {
-    position: relative;
-    display: inline-block;
-    position: fixed;
-    bottom: 8vh;
-    right: 4vh;
-    width: 5vh;
-    height: 5vh;
-    }
-    
-    .addButton-btn {
-    border: none;
-    width: 6.8vh;
-    height: 6.8vh;
+
+.submit-button {
     background-color: #FF6B00;
     color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.4vh;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 0.4vh;
+    border-radius: 2vh;
     cursor: pointer;
-    box-shadow: 0 0.2vh 0.4vh rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    
-    .addButton-btn:hover {
+    transition: background-color 0.3s ease;
+}
+        
+.submit-button:hover {
     background-color: #E65100;
-    transform: scale(1.1);
-    }
+}
     
-    .addButton-content {
-    visibility: hidden;
-    width: 14.5vh;
-    background-color: white;
-    color: rgb(70, 63, 52);
-    text-align: center;
-    border-radius: 0.6vh;
-    padding: 1vh 0;
-    position: absolute;
-    font-weight: 900;
-    font-size: large;
-    top: 50%;
-    left: -15vh; /* Alinha à esquerda do botão */
-    transform: translateY(-50%);
-    z-index: 1;
-    box-shadow: 0vh 0.4vh 0.8vh rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    }
-    
-    .addButton-content p {
-    margin: 0;
-    padding: 1vh 0;
-    cursor: pointer;
-    margin: 0.3vh;
-    background-color: #F0F0F0;
-    border-radius: 5%;
-    }
-    
-    .addButton-content p:hover {
-    background-color: #dbdbdb;
-    }
-    
-    /* Quando ativo, mostra a addButton */
-    .addButton-content.show {
-    visibility: visible;
-    opacity: 1;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.5);
-        overflow-y: auto;
-        }
-        
-        .modal-content {
-            background-color: #FFF5E6;
-            background-color: #FFF;
-        margin: 3% auto;
-        padding: 2vh;
-        border-radius: 1vh;
-        width: 90%;
-        max-width: 50vh;
-        box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.2);
-        animation: modalFadeIn 0.3s;
-        }
-        
-        @keyframes modalFadeIn {
-        from {opacity: 0; transform: translateY(-5vh);}
-        to {opacity: 1; transform: translateY(0);}
-        }
-        
-        .close-button {
-        color: #aaa;
-        float: right;
-        font-size: 2.8vh;
-        font-weight: bold;
-        cursor: pointer;
-        }
-        
-        .close-button:hover,
-        .close-button:focus {
-        color: #FF6B00;
-        text-decoration: none;
-        cursor: pointer;
-        }
-        
-        .modal h2 {
-        color: #FF6B00;
-        margin-bottom: 1.5vh;
-        }
-        
-        .modal p, .modal li {
-        margin-bottom: 1vh;
-        }
-        
-        .form-group {
-        margin-bottom: 1.5vh;
-        }
-        
-        .form-group label {
-        display: block;
-        margin-bottom: 0.5vh;
-            color: #333;
-        }
-        
-        .form-group input,
-        .form-group select {
-        width: 100%;
-        padding: 0.8vh;
-        border: 0.1vh solid #ccc;
-            border-radius: 2vh;
-        }
-        
-        
-        /* Escolher arquivo */
-        
-        .btnsub {
-            display: flex;
-            justify-content: center;
-            
-        }
-        
-        .form-group2 {
-            margin-bottom: 1em;
-        }
-        
-        .form-group2 label {
-            display: block;
-            margin-bottom: 0.5vh;
-        }
-        
-        
-        .form-group2 input {
-            width: 40%;
-            padding: 1vh;
-        border-radius: 4vh;
-            border: none;
-            box-sizing: border-box;
-            background-color: #ccc;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            
-        }
-    
-        .form-group2 input:hover {
-            background-color: #666565a9;
-        }
-    
-        .label-url{
-            padding: 1vh;
-        }
-        
-        /* escolher arquivo fim  */
-        
-        .submit-button {
-        background-color: #FF6B00;
-        color: white;
-        border: none;
-        padding: 1vh 2vh;
-            border-radius: 0.4vh;
-            border-radius: 2vh;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        }
-        
-        .submit-button:hover {
-        background-color: #E65100;
-        }
-    
-    /* perfil de pet */
-    .pet-details-image {
+/* perfil de pet */
+.pet-details-image {
     width: 100%;
     max-height: 30vh;
     object-fit: cover;
     border-radius: 1vh;
     margin-bottom: 1.5vh;
-    }
+}
     
-    .delete-button, .adotar-button {
+.delete-button, .adotar-button {
     background-color: #ff4d4d;
     color: white;
     border: none;
@@ -465,25 +527,27 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1.5vh;
-    }
-    .adotar-button {
+}
+
+.adotar-button {
     background-color: #FF6B00;
     }
-    .adotar-button:hover {
+
+.adotar-button:hover {
     background-color: chocolate;
-    }
+}
     
-    .delete-button:hover {
+.delete-button:hover {
     background-color: #cc0000;
-    }
+}
     
-    @media (min-width: 45vh) {
+@media (min-width: 45vh) {
     .pet-list {
     grid-template-columns: repeat(2, 1fr);
     }
-    }
+}
     
-    @media (min-width: 76.8vh) {
+@media (min-width: 76.8vh) {
     .container {
     padding: 0 2vh;
     }
@@ -499,9 +563,9 @@
     .pet-list {
     grid-template-columns: repeat(3, 1fr);
     }
-    }
+}
     
-    @media (min-width: 102.4vh) {
+@media (min-width: 102.4vh) {
     .container {
     padding: 0 4vh;
     }
@@ -521,4 +585,4 @@
     .pet-list {
     grid-template-columns: repeat(4, 1fr);
     }
-    }
+}

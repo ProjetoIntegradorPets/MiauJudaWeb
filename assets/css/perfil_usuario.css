@@ -229,17 +229,19 @@ hr {
 }
 
 .form-group-ft input {
-    width: 45%;
+    width: 40%;
     padding: 1vh;
-    border-radius: 2em;
+    border-radius: 4vh;
+    border: none;
     box-sizing: border-box;
-    background-color: var(--cor2);
-    margin-right: 0.5vw;
+    background-color: #ccc;
+    cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 0.5vw;
 }
 
 .form-group-ft input:hover {
-    background-color: var(--cor1);
+    background-color: #666565a9;
 }
 
 .file-btn {
@@ -255,36 +257,33 @@ hr {
     justify-content: center;   
 }
 
-.btn-save button, .btn_excluirft button,
-.form-group-ft input { 
+.btn_excluirft button {
+    background-color: #fff;
+    font-size: 0.8em;
+    padding: 0.5vh 0.6vw;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.btn_excluirft button:hover {
+    background-color: #ccc;
+}
+
+.btn-save button {
+    background-color: var(--cor4);
+    font-size: 1em;
+    padding: 0.8vh 1.5vw;
+    transition: all 0.3s ease 0s;
     color: #FFF;
-    text-transform: uppercase;
     border: none;
     cursor: pointer;
     font-weight: 500;
     border-radius: 2em;
 }
 
-.btn_excluirft button {
-    background-color: #ccc;
-    font-size: 0.8em;
-    padding: 0.6vh 0.8vw;
-    transition: background-color 0.3s ease;
-}
-
-.btn_excluirft button:hover {
-    background-color: #a8a6a6;
-}
-
-.btn-save button {
-    background-color: var(--cor1);
-    font-size: 1em;
-    padding: 0.8vh 1.5vw;
-    transition: all 0.3s ease 0s;
-}
-
 .btn-save button:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor1);
     transform: translateY(-0.5vh);
 }
 

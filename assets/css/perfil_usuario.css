@@ -160,11 +160,12 @@ hr {
 .modal-content {
     background-color: #FFF5E6;
     background-color: #FFF;
-    margin: 3% auto;
+    margin: 8% auto;
     padding: 2vh;
-    border-radius: 1vh;
+    border-radius: 1.5em;
     width: 90%;
-    max-width: 50vh;
+    max-width: 30vw;
+    max-height: 70vh;
     box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.2);
     animation: modalFadeIn 0.3s;
 }
@@ -177,7 +178,7 @@ hr {
 .close-button {
     color: #aaa;
     float: right;
-    font-size: 2.8vh;
+    font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
 }
@@ -199,21 +200,27 @@ hr {
     
 .form-group label {
     display: block;
-    margin-bottom: 0.5vh;
+    margin-bottom: 0.8vh;
     color: #333;
 }
 
-.form-group input,
-.form-group select {
+.form-group input {
     width: 100%;
     padding: 0.8vh;
     border: 0.1vh solid #ccc;
     border-radius: 2em;
+    margin-bottom: 0.7vh;
 }
 
-/* Escolher arquivo */       
+/* parte da foto do usuario */
+
+.modal-content h3 {
+    margin-top: 1vh;
+    font-size: 1.3em;
+}
+
 .form-group-ft {
-    margin-bottom: 1em;
+    margin-bottom: 1vh;
 }
 
 .form-group-ft label {
@@ -222,30 +229,65 @@ hr {
 }
 
 .form-group-ft input {
-    width: 40%;
+    width: 45%;
     padding: 1vh;
-border-radius: 4vh;
-    border: none;
+    border-radius: 2em;
     box-sizing: border-box;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
+    background-color: var(--cor2);
+    margin-right: 0.5vw;
+    transition: background-color 0.3s ease;
 }
 
 .form-group-ft input:hover {
-    background-color: #666565a9;
+    background-color: var(--cor1);
 }
 
-.label-url{
-    padding: 1vh;
+.file-btn {
+    margin: 2vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
 
 /* botoes do forms */ 
 .btn-save, .btn_excluirft {
     display: flex;
     justify-content: center;   
 }
+
+.btn-save button, .btn_excluirft button,
+.form-group-ft input { 
+    color: #FFF;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2em;
+}
+
+.btn_excluirft button {
+    background-color: #ccc;
+    font-size: 0.8em;
+    padding: 0.6vh 0.8vw;
+    transition: background-color 0.3s ease;
+}
+
+.btn_excluirft button:hover {
+    background-color: #a8a6a6;
+}
+
+.btn-save button {
+    background-color: var(--cor1);
+    font-size: 1em;
+    padding: 0.8vh 1.5vw;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-save button:hover {
+    background-color: var(--cor2);
+    transform: translateY(-0.5vh);
+}
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 90vh) {

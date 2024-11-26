@@ -92,33 +92,39 @@
                             <b id="user-location">Localização do usuário, bem aqui - Desse Jeito, 000</b>
                         </div>
                     </div>
-                    <!-- PETS E PUBLICACOES CURTIDAS -->
+                    <!-- PETS CURTIDOS -->
                     <div class="curtidas">
                         <a href="#" class="btn_animaisc">VER ANIMAIS CURTIDOS</a>
                     </div>
-                        
+                    <!-- BTN EDITAR PERFIL -->
+                    <div class="btn">
+                        <a href="#" class="btn_editar_perfil" id="edit-profile-btn">EDITAR PERFIL</a>
+                    </div>
                 </div>
             </div>
             <hr>
-
-            <!-- BTN EDITAR PERFIL -->
-            <div class="btn">
-                <a href="#" class="btn_editar_perfil" id="edit-profile-btn">EDITAR PERFIL</a>
-            </div>
         </div>
     </section>
 
     <!-- FORMULÁRIO PARA EDIÇÃO -->
     <div id="edit-profile-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close-button">&times;</span>
             <h3>EDITAR PERFIL DE USUÁRIO</h3>
             <hr>
             <form id="edit-profile-form">
-                <div class="form-group">
-                    <label for="profile-picture">Foto de Perfil:</label>
-                    <input type="file" id="profile-picture" class="btn_img_usuario" accept="image/*"><br>
-                    <button type="button" id="remove-photo" class="btn_excluir_ft">Excluir Foto</button>
+                <div class="form-group-ft">
+                    <label for="userImage">Foto de Perfil:</label>
+                            <div class="file-btn">
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="userimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
+                                <div class="btn_excluirft">
+                                    <button type="button" id="remove-photo" class="btn_excluir_ft">Excluir Foto</button>
+                                </div>
+                            </div>
                 </div>
                 <hr>
                 <div class="form-group">

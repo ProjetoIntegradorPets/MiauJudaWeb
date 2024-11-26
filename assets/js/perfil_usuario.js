@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const editProfileBtn = document.getElementById('edit-profile-btn');
     const editProfileModal = document.getElementById('edit-profile-modal');
-    const closeBtn = editProfileModal.querySelector('.close');
+    const closeBtn = editProfileModal.querySelector('.close-button');
     const editProfileForm = document.getElementById('edit-profile-form');
     const removePhotoBtn = document.getElementById('remove-photo');
 

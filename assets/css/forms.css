@@ -1,3 +1,130 @@
  /* arquivo para estilização dos cadastros de pet e usuário, uma vez que são todos parecidos */
 
- 
+
+/* geral */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    }
+    
+    .modal-content {
+        background-color: #FFF5E6;
+        background-color: #FFF;
+    margin: 3% auto;
+    padding: 2vh;
+    border-radius: 1vh;
+    width: 90%;
+    max-width: 50vh;
+    box-shadow: 0 0.4vh 0.8vh rgba(0,0,0,0.2);
+    animation: modalFadeIn 0.3s;
+    }
+    
+    @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-5vh);}
+    to {opacity: 1; transform: translateY(0);}
+    }
+    
+    .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 2.8vh;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
+    .close-button:hover,
+    .close-button:focus {
+    color: #FF6B00;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    .modal h2 {
+    color: #FF6B00;
+    margin-bottom: 1.5vh;
+    }
+    
+    .modal p, .modal li {
+    margin-bottom: 1vh;
+    }
+    
+    .form-group {
+    margin-bottom: 1.5vh;
+    }
+    
+    .form-group label {
+    display: block;
+    margin-bottom: 0.5vh;
+        color: #333;
+    }
+    
+    .form-group input,
+    .form-group select {
+    width: 100%;
+    padding: 0.8vh;
+    border: 0.1vh solid #ccc;
+        border-radius: 2vh;
+    }
+    
+    
+    /* Escolher arquivo */
+    
+    .btnsub {
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .form-group2 {
+        margin-bottom: 1em;
+    }
+    
+    .form-group2 label {
+        display: block;
+        margin-bottom: 0.5vh;
+    }
+    
+    
+    .form-group2 input {
+        width: 40%;
+        padding: 1vh;
+    border-radius: 4vh;
+        border: none;
+        box-sizing: border-box;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        
+    }
+
+    .form-group2 input:hover {
+        background-color: #666565a9;
+    }
+
+    .label-url{
+        padding: 1vh;
+    }
+    
+    /* escolher arquivo fim  */
+    
+    .submit-button {
+    background-color: #FF6B00;
+    color: white;
+    border: none;
+    padding: 1vh 2vh;
+        border-radius: 0.4vh;
+        border-radius: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .submit-button:hover {
+    background-color: #E65100;
+    }

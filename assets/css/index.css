@@ -286,6 +286,12 @@ hr {
     box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.2);
     margin-bottom: 0.5em;
 }
+.inf-pet{
+    display: flex;
+    justify-content: center;
+    color: #cb4700;
+    font-size: 2vh;
+}
         
 @keyframes modalFadeIn {
     from {opacity: 0; transform: translateY(-5vh);}

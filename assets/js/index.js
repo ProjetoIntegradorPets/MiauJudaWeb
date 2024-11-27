@@ -21,8 +21,228 @@ function closeOnClickOutside(event) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // JSON.parse(localStorage.getItem('pets')) || 
-    let pets = [{"nome":"Rex","raca":"Labrador","descricao":"Cachorro amigável","categoria":"Cachorro"},{"nome":"Max","raca":"Pastor Alemão","descricao":"Cachorro enérgico","categoria":"Cachorro"},{"nome":"Buddy","raca":"Golden Retriever","descricao":"Cachorro fiel","categoria":"Cachorro"},{"nome":"Rocky","raca":"Bulldog","descricao":"Cachorro protetor","categoria":"Cachorro"},{"nome":"Charlie","raca":"Beagle","descricao":"Cachorro brincalhão","categoria":"Cachorro"},{"nome":"Bucky","raca":"Ragdoll","descricao":"Cachorro esperto","categoria":"Cachorro"},{"nome":"Bella","raca":"Golden Retriever","descricao":"Cachorro alegre","categoria":"Cachorro"},{"nome":"Duke","raca":"Bulldog","descricao":"Cachorro fiel","categoria":"Cachorro"},{"nome":"Bentley","raca":"Beagle","descricao":"Cachorro brincalhão","categoria":"Cachorro"},{"nome":"Ranger","raca":"Labrador","descricao":"Cachorro protetor","categoria":"Cachorro"},{"nome":"Diesel","raca":"Pastor Alemão","descricao":"Cachorro enérgico","categoria":"Cachorro"},{"nome":"Toby","raca":"Golden Retriever","descricao":"Cachorro amigável","categoria":"Cachorro"},{"nome":"Luna","raca":"Siamês","descricao":"Gato brincalhão","categoria":"Gato"},{"nome":"Mia","raca":"Persa","descricao":"Gato tranquilo","categoria":"Gato"},{"nome":"Lola","raca":"Maine Coon","descricao":"Gato carinhoso","categoria":"Gato"},{"nome":"Nala","raca":"Bengal","descricao":"Gato curioso","categoria":"Gato"},{"nome":"Simba","raca":"Maine Coon","descricao":"Gato brincalhão","categoria":"Gato"},{"nome":"Zoe","raca":"Bengal","descricao":"Gato curioso","categoria":"Gato"},{"nome":"Shadow","raca":"Ragdoll","descricao":"Gato carinhoso","categoria":"Gato"},{"nome":"Chloe","raca":"Siamês","descricao":"Gato tranquilo","categoria":"Gato"},{"nome":"Gracie","raca":"Persa","descricao":"Gato esperto","categoria":"Gato"},{"nome":"Tiger","raca":"Maine Coon","descricao":"Gato medroso","categoria":"Gato"}];
-    
+    let pets = [
+        {
+          "nome": "Rex",
+          "raca": "Labrador",
+          "descricao": "Cachorro amigável",
+          "categoria": "Cachorro",
+          "localizacao": "Brasil",
+          "tamanho": "Grande",
+          "peso": "30kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Max",
+          "raca": "Pastor Alemão",
+          "descricao": "Cachorro enérgico",
+          "categoria": "Cachorro",
+          "localizacao": "Alemanha",
+          "tamanho": "Grande",
+          "peso": "35kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Buddy",
+          "raca": "Golden Retriever",
+          "descricao": "Cachorro fiel",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Médio",
+          "peso": "32kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Rocky",
+          "raca": "Bulldog",
+          "descricao": "Cachorro protetor",
+          "categoria": "Cachorro",
+          "localizacao": "Inglaterra",
+          "tamanho": "Médio",
+          "peso": "25kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Charlie",
+          "raca": "Beagle",
+          "descricao": "Cachorro brincalhão",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Pequeno",
+          "peso": "12kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Bucky",
+          "raca": "Ragdoll",
+          "descricao": "Cachorro esperto",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Médio",
+          "peso": "16kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Bella",
+          "raca": "Golden Retriever",
+          "descricao": "Cachorro alegre",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Médio",
+          "peso": "28kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Duke",
+          "raca": "Bulldog",
+          "descricao": "Cachorro fiel",
+          "categoria": "Cachorro",
+          "localizacao": "Inglaterra",
+          "tamanho": "Médio",
+          "peso": "24kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Bentley",
+          "raca": "Beagle",
+          "descricao": "Cachorro brincalhão",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Pequeno",
+          "peso": "10kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Ranger",
+          "raca": "Labrador",
+          "descricao": "Cachorro protetor",
+          "categoria": "Cachorro",
+          "localizacao": "Brasil",
+          "tamanho": "Grande",
+          "peso": "33kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Diesel",
+          "raca": "Pastor Alemão",
+          "descricao": "Cachorro enérgico",
+          "categoria": "Cachorro",
+          "localizacao": "Alemanha",
+          "tamanho": "Grande",
+          "peso": "40kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Toby",
+          "raca": "Golden Retriever",
+          "descricao": "Cachorro amigável",
+          "categoria": "Cachorro",
+          "localizacao": "EUA",
+          "tamanho": "Médio",
+          "peso": "29kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Luna",
+          "raca": "Siamês",
+          "descricao": "Gato brincalhão",
+          "categoria": "Gato",
+          "localizacao": "Tailândia",
+          "tamanho": "Pequeno",
+          "peso": "4kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Mia",
+          "raca": "Persa",
+          "descricao": "Gato tranquilo",
+          "categoria": "Gato",
+          "localizacao": "Irã",
+          "tamanho": "Médio",
+          "peso": "5kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Lola",
+          "raca": "Maine Coon",
+          "descricao": "Gato carinhoso",
+          "categoria": "Gato",
+          "localizacao": "EUA",
+          "tamanho": "Grande",
+          "peso": "8kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Nala",
+          "raca": "Bengal",
+          "descricao": "Gato curioso",
+          "categoria": "Gato",
+          "localizacao": "Índia",
+          "tamanho": "Médio",
+          "peso": "7kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Simba",
+          "raca": "Maine Coon",
+          "descricao": "Gato brincalhão",
+          "categoria": "Gato",
+          "localizacao": "EUA",
+          "tamanho": "Grande",
+          "peso": "9kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Zoe",
+          "raca": "Bengal",
+          "descricao": "Gato curioso",
+          "categoria": "Gato",
+          "localizacao": "Índia",
+          "tamanho": "Médio",
+          "peso": "6kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Shadow",
+          "raca": "Ragdoll",
+          "descricao": "Gato carinhoso",
+          "categoria": "Gato",
+          "localizacao": "EUA",
+          "tamanho": "Grande",
+          "peso": "8kg",
+          "sexo": "Macho"
+        },
+        {
+          "nome": "Chloe",
+          "raca": "Siamês",
+          "descricao": "Gato tranquilo",
+          "categoria": "Gato",
+          "localizacao": "Tailândia",
+          "tamanho": "Pequeno",
+          "peso": "3kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Gracie",
+          "raca": "Persa",
+          "descricao": "Gato esperto",
+          "categoria": "Gato",
+          "localizacao": "Irã",
+          "tamanho": "Médio",
+          "peso": "6kg",
+          "sexo": "Fêmea"
+        },
+        {
+          "nome": "Tiger",
+          "raca": "Maine Coon",
+          "descricao": "Gato medroso",
+          "categoria": "Gato",
+          "localizacao": "EUA",
+          "tamanho": "Grande",
+          "peso": "10kg",
+          "sexo": "Macho"
+        }
+      ];  
     try {
         // Faça a requisição AJAX
         fetch('request.php')
@@ -58,7 +278,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const petDetailsImage = document.getElementById('petDetailsImage');
     const petDetailsDesc = document.getElementById('petDetailsDesc');
     const petDetailsType = document.getElementById('petDetailsType');
+
+    const petDetailsLocation = document.getElementById('petDetailsLocation');
+    const petDetailsSize = document.getElementById('petDetailsSize');
+    const petDetailsWeight = document.getElementById('petDetailsWeight');
+    const petDetailsSex = document.getElementById('petDetailsSex');
+
     const deletePetButton = document.querySelector('.delete-button');
+
 
     // ================ Event Listeners
     // TabButtons switch
@@ -76,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cadButtons.forEach((e) => {
         e.addEventListener('click', () => {
             if (login_status === 'true'){ // login_status from logged.js
-                const mod = document.getElementById(`addPetModal_${e.id}`);
+                const mod = document.getElementById(addPetModal_${e.id});
                 mod.style.display = 'block';
             }else{
                 window.location.href = "validar.html";
@@ -148,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement('button');
 
-            pageButton.className = `page-button ${i === currentPage ? 'active' : ''}`;
+            pageButton.className = page-button ${i === currentPage ? 'active' : ''};
             pageButton.textContent = i;
 
             pageButton.addEventListener('click', () => {
@@ -180,13 +407,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function showPetDetails(pet) {
         // display informations
         petDetailsName.textContent = pet.nome;
-        // petDetailsImage.src = pet.image;
         petDetailsImage.src = 'https://v0.dev/placeholder.svg';
         petDetailsImage.alt = pet.nome;
-        petDetailsDesc.textContent = `Descricao: ${pet.descricao}`;
-        petDetailsType.textContent = `Tipo: ${pet.categoria === 'Cachorro' ? 'Cão' : 'Gato'}`;
+        petDetailsLocation.textContent = Localização: ${pet.localizacao};
+        petDetailsSize.textContent = Tamanho: ${pet.tamanho};
+        petDetailsWeight.textContent = Peso: ${pet.peso};
+        petDetailsSex.textContent = Sexo: ${pet.sexo};
+        petDetailsDesc.textContent = Descrição: ${pet.descricao};
+        petDetailsType.textContent = Tipo: ${pet.categoria === 'Cachorro' ? 'Cão' : 'Gato'};
+        
+        // Show the modal
         petDetailsModal.style.display = 'block';
-
+    
         // Delete pet
         deletePetButton.onclick = () => {
             if (confirm('Tem certeza que deseja excluir este pet?')) {

@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cadButtons.forEach((e) => {
         e.addEventListener('click', () => {
             if (login_status === 'true'){ // login_status from logged.js
-                const mod = document.getElementById(addPetModal_${e.id});
+                const mod = document.getElementById(`addPetModal_${e.id}`);
                 mod.style.display = 'block';
             }else{
                 window.location.href = "validar.html";
@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement('button');
 
-            pageButton.className = page-button ${i === currentPage ? 'active' : ''};
+            pageButton.className = `page-button ${i === currentPage ? 'active' : ''};`
             pageButton.textContent = i;
 
             pageButton.addEventListener('click', () => {
@@ -409,12 +409,12 @@ document.addEventListener('DOMContentLoaded', () => {
         petDetailsName.textContent = pet.nome;
         petDetailsImage.src = 'https://v0.dev/placeholder.svg';
         petDetailsImage.alt = pet.nome;
-        petDetailsLocation.textContent = Localização: ${pet.localizacao};
-        petDetailsSize.textContent = Tamanho: ${pet.tamanho};
-        petDetailsWeight.textContent = Peso: ${pet.peso};
-        petDetailsSex.textContent = Sexo: ${pet.sexo};
-        petDetailsDesc.textContent = Descrição: ${pet.descricao};
-        petDetailsType.textContent = Tipo: ${pet.categoria === 'Cachorro' ? 'Cão' : 'Gato'};
+        petDetailsLocation.textContent = `Localização: ${pet.localizacao}`;
+        petDetailsSize.textContent = `Tamanho: ${pet.tamanho}`;
+        petDetailsWeight.textContent = `Peso: ${pet.peso}`;
+        petDetailsSex.textContent = `Sexo: ${pet.sexo}`;
+        petDetailsDesc.textContent = `Descrição: ${pet.descricao}`;
+        petDetailsType.textContent = `Tipo: ${pet.categoria === 'Cachorro' ? 'Cão' : 'Gato'}`;
         
         // Show the modal
         petDetailsModal.style.display = 'block';

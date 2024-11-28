@@ -149,7 +149,7 @@ const adoptionChartOptions = {
 
 // GRAFICO ANIMAIS DISPONIVEIS
 const availableAnimalsChartOptions = {
-  series: [102],
+  series: [100],
   chart: {
     type: 'radialBar',
     height: 350,

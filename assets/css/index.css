@@ -16,46 +16,6 @@ main {
     color: #FF6B00;
 }
     
- /* AJUDA */
-.help-section {
-    background-color: white;
-    border-radius: 1em;
-    margin-bottom: 3vh;
-    box-shadow: 0vh 0.2vh 0.4vh rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-    
-.help-section:hover {
-    transform: translateY(-0.5vh);
-}
-    
-.help-section h2 {
-    text-align: center;
-    color: var(--cor3);
-    margin-bottom: 1vh;  
-    font-size: 1em;
-}
-    
-.help-section p {
-    color: #666;
-    margin-bottom: 1vh;
-}
-    
-.help-button {
-    background-color: #ff7d03;
-    color: white;
-    border: none;
-    padding: 1vh 2vh;
-    border-radius: 2em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-    
-.help-button:hover {
-    background-color: #E65100;
-    }
-    
 /* SECTION */
     .section-pets {
     width: 100%;
@@ -546,6 +506,46 @@ hr {
 .delete-button:hover {
     background-color: #cc0000;
 }
+
+/* AJUDA */
+.help-section {
+    background-color: white;
+    border-radius: 1em;
+    margin-bottom: 3vh;
+    box-shadow: 0vh 0.2vh 0.4vh rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+    
+.help-section:hover {
+    transform: translateY(-0.5vh);
+}
+    
+.help-section h2 {
+    text-align: center;
+    color: var(--cor3);
+    margin-bottom: 1vh;  
+    font-size: 1em;
+}
+    
+.help-section p {
+    color: #666;
+    margin-bottom: 1vh;
+}
+    
+.help-button {
+    background-color: #ff7d03;
+    color: white;
+    border: none;
+    padding: 1vh 2vh;
+    border-radius: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    
+.help-button:hover {
+    background-color: #E65100;
+    }
     
 @media (min-width: 45vh) {
     .pet-list {

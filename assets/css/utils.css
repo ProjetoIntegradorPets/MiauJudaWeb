@@ -55,7 +55,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 4vh;
-    border-radius: 0 0 1vh 1vh;
+    border-radius: 0 0 1em 1em;
     margin: 0 auto;
     border-color: #FFF;
     box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.1);

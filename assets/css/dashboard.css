@@ -58,6 +58,10 @@
     justify-content: space-between;
 }
 
+.card h3 {
+    text-transform: uppercase;
+}
+
 .card-inner > .material-icons-outlined,
 .card-inner > .bx.bxs-dog.bx-flip-horizontal,
 .card-inner > .bx.bxs-cat.bx-flip-horizontal {

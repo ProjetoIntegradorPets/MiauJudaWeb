@@ -547,13 +547,13 @@ hr {
 }
     
 .help-button {
-    width: 40%;
+    width: 30%;
     background-color: #ff7d03;
     color: white;
     border: none;
-    padding: 1vh 2vh;
-    border-radius: 1.5em;
-    font-size: 2vh;
+    padding: 1vh 1vh;
+    border-radius: 1.8em;
+    font-size: 1.8vh;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -601,7 +601,7 @@ hr {
     }
     
     .help-section h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     }
     
     .lost-pets h2 {

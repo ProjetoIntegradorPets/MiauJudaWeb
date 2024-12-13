@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/utils.css">
 
     <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/pets_usuario.js" defer></script>
+    
 </head>
 <body>
     <div class="container">
@@ -44,6 +46,29 @@
                 <div></div>
             </label>
         </header>
+
+
+        <section id="petDetailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="petDetailsName"></h2>
+                <hr>
+                <img id="petDetailsImage" src="" alt="Pet Image" class="pet-details-image">
+                <span class="heart-button">&#9825;</span>
+                <p id="petDetailsLocation"></p>
+                <hr>
+                <p id="petDetailsSize"></p>
+                <p id="petDetailsWeight"></p>
+                <p id="petDetailsSex"></p>
+                <hr>
+                <p id="petDetailsDesc"></p>
+                <p id="petDetailsType"></p>
+                <div class="botoes_perfil_pet">
+                    <a href="#" class="btn_editar_perfil" id="edit-profile-btn">Editar Pet</a>
+                    <button id="petButton" class="delete-button">Excluir Pet</button>
+                </div>
+            </div>
+        </section>
     
         <main>
             <section class="section-pets">
@@ -94,16 +119,62 @@
                 </div>
             </section>
 
-            <section id="petDetailsModal" class="modal">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <h2 id="petDetailsName"></h2>
-                    <img id="petDetailsImage" src="" alt="Pet Image" class="pet-details-image">
-                    <p id="petDetailsLocation"></p>
-                    <p id="petDetailsType"></p>
-                    <button id="deletePetButton" class="delete-button">Excluir Pet</button>
+                <!-- FORMULÁRIO PARA EDIÇÃO -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>EDITAR PERFIL DE USUÁRIO</h3>
+            <hr>
+            <form id="edit-profile-form">
+                <div class="form-group-ft">
+                    <label for="userImage">Foto de Perfil:</label>
+                            <div class="file-btn">
+                                <input type="file" id="profile-picture" accept="image/*" style="display: none;"
+                                    onchange="updateFileName()">
+                                <input type="button" class="userimage" value="Selecionar Imagem"
+                                    onclick="document.getElementById('profile-picture').click();">
+                                <span id="file-name"></span>
+                                <div class="btn_excluirft">
+                                    <button type="button" id="remove-photo" class="btn_excluir_ft">Excluir Foto</button>
+                                </div>
+                            </div>
                 </div>
-            </section>
+                <hr>
+                <div class="form-group">
+                    <label for="petName">Nome do Pet:</label>
+                    <input type="text" id="petName" name="petName" required>
+                </div>
+                <div class="form-group">
+                    <label for="petType">Tipo:</label>
+                    <select id="petType" name="petType" required>
+                        <option value="dog">Cão</option>
+                        <option value="cat">Gato</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="petLocation">Localização:</label>
+                    <input type="text" id="petLocation" name="petLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="petBreed">Raça:</label>
+                    <input type="text" id="petBreed" name="petBreed" required>
+                </div>
+                <div class="form-group">
+                    <label for="petWeight">Peso:</label>
+                    <input type="number" id="petWeight" name="petWeight" required>
+                </div>
+                <div class="form-group">
+                    <label for="petHeight">Tamanho:</label>
+                    <input type="number" id="petHeight" name="petHeight" required>
+                </div>
+                <div class="form-group">
+                    <label for="petDescription">Descrição:</label>
+                    <input type="text" id="petDescription" name="petDescription" required>
+                </div>
+
+                </div>
+    </div>
+
 
             <div class="addButton">
                 <button class="addButton-btn" onclick="toggleAddButton()" id="addButton-btn">+</button>

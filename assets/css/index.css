@@ -492,7 +492,7 @@ hr {
     margin-bottom: 1.5vh;
 }
     
-.delete-button, .adotar-button {
+.delete-button, .btn_editar_perfil {
     border: none;
     padding: 1vh 2vh;
     border-radius: 2em;
@@ -506,15 +506,14 @@ hr {
     justify-content: center;
 }
 
-.adotar-button {
+.btn_editar_perfil {
     background-color: var(--cor4);
     color: #fff;
-    text-transform: uppercase;
     margin-right: 0.5vw;
     }
 
-.adotar-button:hover {
-    background-color: var(--cor1);
+.btn_editar_perfil:hover {
+    background-color: #E65100;
 }
     
 .delete-button:hover {
@@ -522,6 +521,65 @@ hr {
     color: #fff;
 }
 
+/* Edição de pet */
+
+.form-group-ft input {
+    width: 40%;
+    padding: 1vh;
+    border-radius: 4vh;
+    border: none;
+    box-sizing: border-box;
+    background-color: #FF6B00;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 0.5vw;
+}
+
+.form-group-ft input:hover {
+    background-color: #E65100;
+}
+
+.file-btn {
+    margin: 2vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.btn-save button {
+    background-color: var(--cor4);
+    font-size: 1em;
+    padding: 0.8vh 1.5vw;
+    transition: all 0.3s ease 0s;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 2em;
+}
+
+.btn-save button:hover {
+    background-color: #E65100;
+}
+
+.btn-save, .btn_excluirft {
+    display: flex;
+    justify-content: center;   
+}
+
+.btn_excluirft button {
+    background-color: #fff;
+    font-size: 0.8em;
+    padding: 0.5vh 0.6vw;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 1.5em;
+}
+
+.btn_excluirft button:hover {
+    background-color: #ccc;
+}
 /* AJUDA */
 .help-section {
     background-color: white;
